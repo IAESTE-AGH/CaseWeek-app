@@ -3,7 +3,6 @@
 ## Table of contents <!-- omit in toc -->
 
 - [Prerequisites](#prerequisites)
-- [Environmental variables](#environmental-variables)
 - [Available Scripts](#available-scripts)
   - [`npm start`](#npm-start)
   - [`npm test`](#npm-test)
@@ -18,17 +17,6 @@
 ## Prerequisites
 
 To start developing in frontend backend must be running, it can be opened either in dev container or locally.
-
-## Environmental variables
-
-In order for frontend to run correctly, setting up following env variables is mandatory.
-The location of `.env` file is: `root/src/frontend/.env`
-
-All required vars:
-
-```
-REACT_APP_API_BASE_URL=http://localhost:2115/
-```
 
 ## Available Scripts
 
