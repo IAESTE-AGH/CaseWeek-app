@@ -1,0 +1,12 @@
+{
+    "dockerComposeFile": "../../../docker-compose.yaml",
+    "service": "frontend",
+    "runServices": ["frontend"],
+    "workspaceFolder": "/code",
+    "customizations": {
+        "vscode": {
+            "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
+        }
+    },
+    "shutdownAction": "none"
+}

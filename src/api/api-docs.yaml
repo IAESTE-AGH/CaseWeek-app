@@ -1,0 +1,1311 @@
+openapi: 3.0.1
+info:
+    title: OpenAPI definition
+    version: v0
+servers:
+    - url: http://localhost:2115/api
+      description: Generated server url
+paths:
+    /workshops/{id}:
+        get:
+            tags:
+                - Workshops
+            operationId: getById
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/WorkshopItem"
+        put:
+            tags:
+                - Workshops
+            operationId: update
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/WorkshopItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/WorkshopItem"
+        delete:
+            tags:
+                - Workshops
+            operationId: delete
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/MessageResponse"
+    /users/{id}:
+        get:
+            tags:
+                - Users
+            operationId: getById_1
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/UserItem"
+        put:
+            tags:
+                - Users
+            operationId: update_1
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/UserItemUpdate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/UserItem"
+        delete:
+            tags:
+                - Users
+            operationId: delete_1
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/MessageResponse"
+    /users/password:
+        put:
+            tags:
+                - Users
+            operationId: updatePassword
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/UserItemUpdatePassword"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/MessageResponse"
+    /universities/{id}:
+        get:
+            tags:
+                - Universities
+            operationId: getById_2
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/UniversityItem"
+        put:
+            tags:
+                - Universities
+            operationId: update_2
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/UniversityItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/UniversityItem"
+        delete:
+            tags:
+                - Universities
+            operationId: delete_2
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/MessageResponse"
+    /partners/{id}:
+        get:
+            tags:
+                - Partners
+            operationId: getById_3
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/PartnerItem"
+        put:
+            tags:
+                - Partners
+            operationId: update_3
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/PartnerItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/PartnerItem"
+        delete:
+            tags:
+                - Partners
+            operationId: delete_3
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                type: object
+    /partners/{id}/publish:
+        put:
+            tags:
+                - Partners
+            operationId: publishPartner
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+                - name: publish
+                  in: query
+                  required: true
+                  schema:
+                      type: boolean
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/PartnerItem"
+    /languages/{id}:
+        get:
+            tags:
+                - Languages
+            operationId: getById_4
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/LanguageItem"
+        put:
+            tags:
+                - Languages
+            operationId: update_4
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/LanguageItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/LanguageItem"
+        delete:
+            tags:
+                - Languages
+            operationId: delete_4
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/MessageResponse"
+    /field-of-studies/{id}:
+        get:
+            tags:
+                - Field Of Studies
+            operationId: getById_5
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/FieldOfStudyItem"
+        put:
+            tags:
+                - Field Of Studies
+            operationId: update_5
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/FieldOfStudyItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/FieldOfStudyItem"
+        delete:
+            tags:
+                - Field Of Studies
+            operationId: delete_5
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/MessageResponse"
+    /companies/{id}:
+        get:
+            tags:
+                - Companies
+            operationId: getById_6
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/CompanyItem"
+        put:
+            tags:
+                - Companies
+            operationId: update_6
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/CompanyItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/CompanyItem"
+        delete:
+            tags:
+                - Companies
+            operationId: delete_6
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                type: object
+    /companies/{id}/publish:
+        put:
+            tags:
+                - Companies
+            operationId: publishCompany
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+                - name: publish
+                  in: query
+                  required: true
+                  schema:
+                      type: boolean
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/CompanyItem"
+    /workshops/:
+        get:
+            tags:
+                - Workshops
+            operationId: getAll
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/WorkshopItem"
+        post:
+            tags:
+                - Workshops
+            operationId: create
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/WorkshopItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/WorkshopItem"
+    /users/:
+        get:
+            tags:
+                - Users
+            operationId: getAll_1
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/UserItem"
+        post:
+            tags:
+                - Users
+            operationId: create_1
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/UserItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/UserItem"
+    /universities/:
+        get:
+            tags:
+                - Universities
+            operationId: getAll_2
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/UniversityItem"
+        post:
+            tags:
+                - Universities
+            operationId: create_2
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/UniversityItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/UniversityItem"
+    /partners/:
+        get:
+            tags:
+                - Partners
+            operationId: getAll_3
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/PartnerItem"
+        post:
+            tags:
+                - Partners
+            operationId: create_3
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/PartnerItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/PartnerItem"
+    /languages/:
+        get:
+            tags:
+                - Languages
+            operationId: getAll_4
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/LanguageItem"
+        post:
+            tags:
+                - Languages
+            operationId: create_4
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/LanguageItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/LanguageItem"
+    /field-of-studies/:
+        get:
+            tags:
+                - Field Of Studies
+            operationId: getAll_5
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/FieldOfStudyItem"
+        post:
+            tags:
+                - Field Of Studies
+            operationId: create_5
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/FieldOfStudyItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/FieldOfStudyItem"
+    /companies/:
+        get:
+            tags:
+                - Companies
+            operationId: getAll_6
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                type: array
+                                items:
+                                    $ref: "#/components/schemas/CompanyItem"
+        post:
+            tags:
+                - Companies
+            operationId: create_6
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/CompanyItemCreate"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/CompanyItem"
+    /auth/login:
+        post:
+            tags:
+                - Auth
+            operationId: login
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/UserItemLogin"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/UserItem"
+    /users/{id}/role:
+        patch:
+            tags:
+                - Users
+            operationId: updateRole
+            parameters:
+                - name: id
+                  in: path
+                  required: true
+                  schema:
+                      type: string
+                      format: uuid
+            requestBody:
+                content:
+                    application/json:
+                        schema:
+                            $ref: "#/components/schemas/UserItemUpdateRole"
+                required: true
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/UserItem"
+    /auth/current-user:
+        get:
+            tags:
+                - Auth
+            operationId: currentAuthenticatedUser
+            parameters:
+                - name: secretToken
+                  in: cookie
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                "200":
+                    description: OK
+                    content:
+                        "*/*":
+                            schema:
+                                $ref: "#/components/schemas/UserItem"
+    /auth/logout:
+        delete:
+            tags:
+                - Auth
+            operationId: logout
+            parameters:
+                - name: refreshToken
+                  in: cookie
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                "200":
+                    description: OK
+components:
+    schemas:
+        CompanyItem:
+            required:
+                - id
+                - logoUrl
+                - name
+                - shortDescription
+                - websiteUrl
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                name:
+                    type: string
+                logoUrl:
+                    type: string
+                websiteUrl:
+                    type: string
+                shortDescription:
+                    type: string
+                longDescription:
+                    type: string
+                displayPriority:
+                    type: integer
+                    format: int32
+                published:
+                    type: boolean
+        FieldOfStudyItem:
+            required:
+                - id
+                - name
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                name:
+                    type: string
+        UniversityItem:
+            required:
+                - id
+                - name
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                name:
+                    type: string
+        WorkshopItemCreate:
+            required:
+                - allFieldsOfStudyAccepted
+                - company
+                - longDescription
+                - preferableFieldsOfStudy
+                - registrationEndsAt
+                - shortDescription
+                - startsAt
+                - title
+                - university
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                company:
+                    $ref: "#/components/schemas/CompanyItem"
+                university:
+                    $ref: "#/components/schemas/UniversityItem"
+                title:
+                    type: string
+                startsAt:
+                    type: string
+                    format: date-time
+                registrationEndsAt:
+                    type: string
+                    format: date-time
+                shortDescription:
+                    type: string
+                longDescription:
+                    type: string
+                address:
+                    type: string
+                capacity:
+                    type: integer
+                    format: int32
+                durationMinutes:
+                    type: integer
+                    format: int32
+                emailTextCandidate:
+                    type: string
+                emailTextQualified:
+                    type: string
+                minYearOfStudy:
+                    type: integer
+                    format: int32
+                maxYearOfStudy:
+                    type: integer
+                    format: int32
+                preferableFieldsOfStudy:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/FieldOfStudyItem"
+                allFieldsOfStudyAccepted:
+                    type: boolean
+        WorkshopItem:
+            required:
+                - allFieldsOfStudyAccepted
+                - company
+                - longDescription
+                - preferableFieldsOfStudy
+                - registrationEndsAt
+                - shortDescription
+                - startsAt
+                - status
+                - title
+                - university
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                company:
+                    $ref: "#/components/schemas/CompanyItem"
+                university:
+                    $ref: "#/components/schemas/UniversityItem"
+                title:
+                    type: string
+                status:
+                    type: string
+                    enum:
+                        - UNPUBLISHED
+                        - PUBLISHED
+                        - FINISHED
+                        - CANCELLED
+                startsAt:
+                    type: string
+                    format: date-time
+                registrationEndsAt:
+                    type: string
+                    format: date-time
+                shortDescription:
+                    type: string
+                longDescription:
+                    type: string
+                address:
+                    type: string
+                capacity:
+                    type: integer
+                    format: int32
+                durationMinutes:
+                    type: integer
+                    format: int32
+                emailTextCandidate:
+                    type: string
+                emailTextQualified:
+                    type: string
+                minYearOfStudy:
+                    type: integer
+                    format: int32
+                maxYearOfStudy:
+                    type: integer
+                    format: int32
+                preferableFieldsOfStudy:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/FieldOfStudyItem"
+                allFieldsOfStudyAccepted:
+                    type: boolean
+                archived:
+                    type: boolean
+        LanguageSkillItemCreate:
+            required:
+                - languageId
+                - skillLevel
+            type: object
+            properties:
+                languageId:
+                    type: string
+                    format: uuid
+                skillLevel:
+                    type: string
+                    enum:
+                        - NATIVE
+                        - FLUENT
+                        - INTERMEDIATE
+                        - BEGINNER
+        UserItemUpdate:
+            required:
+                - email
+                - fieldOfStudyId
+                - firstName
+                - languageSkills
+                - lastName
+                - phoneNumber
+                - sex
+                - universityId
+                - yearOfStudy
+            type: object
+            properties:
+                firstName:
+                    type: string
+                lastName:
+                    type: string
+                email:
+                    type: string
+                phoneNumber:
+                    type: string
+                sex:
+                    type: string
+                universityId:
+                    type: string
+                    format: uuid
+                fieldOfStudyId:
+                    type: string
+                    format: uuid
+                yearOfStudy:
+                    type: integer
+                    format: int32
+                languageSkills:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/LanguageSkillItemCreate"
+        LanguageItem:
+            required:
+                - id
+                - name
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                name:
+                    type: string
+        LanguageSkillItem:
+            required:
+                - id
+                - language
+                - skillLevel
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                language:
+                    $ref: "#/components/schemas/LanguageItem"
+                skillLevel:
+                    type: string
+                    enum:
+                        - NATIVE
+                        - FLUENT
+                        - INTERMEDIATE
+                        - BEGINNER
+        UserItem:
+            required:
+                - email
+                - fieldOfStudy
+                - firstName
+                - id
+                - languageSkills
+                - lastName
+                - phoneNumber
+                - role
+                - sex
+                - university
+                - workshopMembers
+                - yearOfStudy
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                firstName:
+                    type: string
+                lastName:
+                    type: string
+                email:
+                    type: string
+                phoneNumber:
+                    type: string
+                sex:
+                    type: string
+                university:
+                    $ref: "#/components/schemas/UniversityItem"
+                fieldOfStudy:
+                    $ref: "#/components/schemas/FieldOfStudyItem"
+                yearOfStudy:
+                    type: integer
+                    format: int32
+                languageSkills:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/LanguageSkillItem"
+                workshopMembers:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/WorkshopMemberItem"
+                role:
+                    type: string
+                    enum:
+                        - STUDENT
+                        - IAESTE_MEMBER
+                        - LOCAL_COORDINATOR
+                        - GENERAL_COORDINATOR
+                        - ADMIN
+        WorkshopMemberItem:
+            required:
+                - id
+                - status
+                - user
+                - workshop
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                workshop:
+                    $ref: "#/components/schemas/WorkshopItem"
+                user:
+                    $ref: "#/components/schemas/UserItem"
+                status:
+                    type: string
+                    enum:
+                        - CANDIDATE
+                        - QUALIFIED
+                        - CONFIRMED
+                        - RESERVE
+                        - REJECTED
+                        - RESIGNED
+        UserItemUpdatePassword:
+            required:
+                - id
+                - newPassword
+                - oldPassword
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                oldPassword:
+                    type: string
+                newPassword:
+                    type: string
+        MessageResponse:
+            type: object
+            properties:
+                message:
+                    type: string
+        UniversityItemCreate:
+            required:
+                - name
+            type: object
+            properties:
+                name:
+                    type: string
+        PartnerItemCreate:
+            required:
+                - logoUrl
+                - name
+                - partnerType
+                - shortDescription
+                - websiteUrl
+            type: object
+            properties:
+                name:
+                    type: string
+                logoUrl:
+                    type: string
+                websiteUrl:
+                    type: string
+                partnerType:
+                    type: string
+                    enum:
+                        - HONORABLE_PATRONAGE
+                        - MEDIA_PATRONAGE
+                        - SPONSOR
+                        - OTHER
+                shortDescription:
+                    type: string
+                longDescription:
+                    type: string
+                displayPriority:
+                    type: integer
+                    format: int32
+        PartnerItem:
+            required:
+                - id
+                - logoUrl
+                - name
+                - partnerType
+                - shortDescription
+                - websiteUrl
+            type: object
+            properties:
+                id:
+                    type: string
+                    format: uuid
+                name:
+                    type: string
+                logoUrl:
+                    type: string
+                websiteUrl:
+                    type: string
+                partnerType:
+                    type: string
+                    enum:
+                        - HONORABLE_PATRONAGE
+                        - MEDIA_PATRONAGE
+                        - SPONSOR
+                        - OTHER
+                shortDescription:
+                    type: string
+                longDescription:
+                    type: string
+                displayPriority:
+                    type: integer
+                    format: int32
+                published:
+                    type: boolean
+        LanguageItemCreate:
+            required:
+                - name
+            type: object
+            properties:
+                name:
+                    type: string
+        FieldOfStudyItemCreate:
+            required:
+                - name
+            type: object
+            properties:
+                name:
+                    type: string
+        CompanyItemCreate:
+            required:
+                - logoUrl
+                - name
+                - shortDescription
+                - websiteUrl
+            type: object
+            properties:
+                name:
+                    type: string
+                logoUrl:
+                    type: string
+                websiteUrl:
+                    type: string
+                shortDescription:
+                    type: string
+                longDescription:
+                    type: string
+                displayPriority:
+                    type: integer
+                    format: int32
+        UserItemCreate:
+            required:
+                - email
+                - fieldOfStudyId
+                - firstName
+                - languageSkills
+                - lastName
+                - password
+                - phoneNumber
+                - sex
+                - universityId
+                - yearOfStudy
+            type: object
+            properties:
+                firstName:
+                    type: string
+                lastName:
+                    type: string
+                email:
+                    type: string
+                phoneNumber:
+                    type: string
+                sex:
+                    type: string
+                universityId:
+                    type: string
+                    format: uuid
+                fieldOfStudyId:
+                    type: string
+                    format: uuid
+                yearOfStudy:
+                    type: integer
+                    format: int32
+                password:
+                    type: string
+                languageSkills:
+                    type: array
+                    items:
+                        $ref: "#/components/schemas/LanguageSkillItemCreate"
+        UserItemLogin:
+            required:
+                - email
+                - password
+            type: object
+            properties:
+                email:
+                    type: string
+                password:
+                    type: string
+        UserItemUpdateRole:
+            required:
+                - role
+            type: object
+            properties:
+                role:
+                    type: string
+                    enum:
+                        - STUDENT
+                        - IAESTE_MEMBER
+                        - LOCAL_COORDINATOR
+                        - GENERAL_COORDINATOR
+                        - ADMIN
