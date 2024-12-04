@@ -12,7 +12,7 @@ import { ToastContainer } from "react-toastify"
 import { RouterProvider } from "react-router-dom"
 import { DialogProvider } from "./contexts/Modals"
 import { QueryClientProvider, QueryClient } from "react-query"
-import { AuthContextProvider } from "@/contexts/Auth/Provider"
+// import { AuthContextProvider } from "@/contexts/Auth/Provider"
 
 const queryClient = new QueryClient()
 
@@ -24,13 +24,13 @@ root.render(
             {/* React use query context */}
             <QueryClientProvider client={queryClient}>
                 {/* App's authentication details context */}
-                <AuthContextProvider>
+                {/* <AuthContextProvider> */}
                     {/* App's dialog context */}
                     <DialogProvider>
                         <RouterProvider router={router} />
                         <ToastContainer position="bottom-right" pauseOnHover={false} />
                     </DialogProvider>
-                </AuthContextProvider>
+                {/* </AuthContextProvider> */}
             </QueryClientProvider>
         </ThemeProvider>
     </React.StrictMode>
