@@ -1,5 +1,5 @@
 export const env = {
-    API_BASE_URL: "",
+    API_BASE_URL: "apikey",
 }
 
 // Assert that .env variables are defined

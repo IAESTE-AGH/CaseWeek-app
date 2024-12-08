@@ -33,7 +33,17 @@ import AdminUpdateWorkshopPage from "@/pages/admin/workshops/updateWorkshop"
 // 5. MAIN | Home page
 import HomePage from "@/pages/homePage"
 
-// 6. MAIN | Login page
+// 6. MAIN | Workshops page
+import WorkshopsPage from "@/pages/workshopsPage"
+import WorkshopPage from "@/pages/workshopPage"
+
+// 7. MAIN | Partners page
+import PartnersPage from "@/pages/partnersPage";
+
+// 8. MAIN | Companies page
+import CompaniesPage from "@/pages/companiesPage"
+
+// 9. MAIN | Login page
 import LoginPage from "./pages/loginPage"
 
 export const router = createBrowserRouter([
@@ -43,9 +53,10 @@ export const router = createBrowserRouter([
             { path: "/", element: <HomePage /> },
             { path: "/projekt", element: <Navbar /> },
             { path: "/iaeste", element: <Navbar /> },
-            { path: "/warsztaty", element: <Navbar /> },
-            { path: "/partnerzy", element: <Navbar /> },
-            { path: "/firmy", element: <Navbar /> },
+            { path: "/warsztaty", element: <WorkshopsPage /> },
+            { path: "/warsztaty/:id", element: <WorkshopPage />},
+            { path: "/partnerzy", element: <PartnersPage /> },
+            { path: "/firmy", element: <CompaniesPage /> },
             { path: "/kontakt", element: <Navbar /> },
 
             { path: "/login", element: <LoginPage /> },
@@ -53,7 +64,6 @@ export const router = createBrowserRouter([
             { path: "/logout", element: <Navbar /> },
             { path: "/user", element: <Navbar /> },
             { path: "/user/warsztaty", element: <Navbar /> },
-
             {
                 path: "/admin",
                 element: <AdminRouteLayout />,
