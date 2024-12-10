@@ -8,7 +8,8 @@ const WorkshopsList = () => {
         {WORKSHOPS_MOCKS.map(workshop => (
             <Link to={workshop.id ? `/warsztaty/${workshop.id}` : "/warsztaty"} className={s.workshopLink}>
             <li>
-                <h1>Nazwa wrsztatu: {workshop.title}</h1> 
+                <h1>Nazwa wrsztatu: {workshop.title}</h1>
+                <p>Przykładowa zmiana</p> 
             </li>
         </Link>
 
