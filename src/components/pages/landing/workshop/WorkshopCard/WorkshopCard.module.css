@@ -1,3 +1,27 @@
-.workshopWrapper{
+.workshopWrapper {
     background-color: #ccc;
+}
+.mWrap {
+    display: flex;
+    background-color: #ccc;
+    margin: auto;
+    border-radius: 15px;
+    padding: 2rem;
+}
+.infoWrap {
+    display: flex;
+    padding: 1rem 0;
+}
+.infoColumn {
+    padding-right: 5rem;
+}
+.info {
+    margin: 1rem 0;
+}
+.icons {
+    translate: -5px 5px;
+}
+.span {
+    color: #333;
+    padding-right: 6px;
 }
