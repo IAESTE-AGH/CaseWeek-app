@@ -16,7 +16,7 @@ const WorkshopCard = () => {
             <section className={s.sWrap}>
                 <div className={s.hero}>
                     <h3>{workshop.title}</h3>
-                    <img className= {s.temp} src={workshop.company.logoUrl} alt="" />
+                    <img className={s.temp} src={workshop.company.logoUrl} alt="" />
                     <h4>{workshop.company.name}</h4>
                 </div>
             </section>
@@ -85,6 +85,7 @@ const WorkshopCard = () => {
                                 <EmojiFlagsIcon className={s.icons} />
                                 Kierunek studiów
                             </span>
+                            {workshop.preferableFieldsOfStudy.map((field) => field.name).join(", ")}
                         </div>
                     </div>
                 </div>
