@@ -30,11 +30,13 @@ body {
     letter-spacing: 10px;
 }
 
-.partners-grid {
+.partnersGrid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
     justify-items: center;
+    list-style-type: none;
+    
 }
 
 .partner {
@@ -53,8 +55,14 @@ body {
     transform: scale(1.1);
 }
 
-.partner-name {
+.partnerName {
     margin-top: 10px;
     font-size: 1rem;
     font-weight: 600;
+}
+
+.partnerStatus {
+    margin-top: 6px;
+    font-size: 0.75rem;
+    color: #1271FF;
 }

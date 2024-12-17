@@ -9,7 +9,8 @@ export const MOCK_COMPANIES: Company[] = [
         "shortDescription": "Leading the way in technological innovation.",
         "longDescription": "Tech Innovators Inc. is a cutting-edge technology company that specializes in developing innovative solutions for various industries.",
         "displayPriority": 1,
-        "published": true
+
+        
       },
       {
         "id": "c2",
@@ -19,7 +20,8 @@ export const MOCK_COMPANIES: Company[] = [
         "shortDescription": "Sustainable energy solutions for a better future.",
         "longDescription": "Global Green Energy is dedicated to providing sustainable and environmentally friendly energy solutions to address the world's energy challenges.",
         "displayPriority": 2,
-        "published": true
+ 
+        
       },
       {
         "id": "c3",
@@ -29,7 +31,8 @@ export const MOCK_COMPANIES: Company[] = [
         "shortDescription": "Setting the trends in the fashion industry.",
         "longDescription": "Fashion Trends Co. is a fashion-forward company that designs and produces stylish and trend-setting clothing for fashion enthusiasts worldwide.",
         "displayPriority": 3,
-        "published": true
+
+       
       },
       {
         "id": "c4",
@@ -39,6 +42,7 @@ export const MOCK_COMPANIES: Company[] = [
         "shortDescription": "Innovative healthcare solutions for better lives.",
         "longDescription": "HealthCare Innovations Ltd. focuses on developing innovative healthcare solutions to improve the quality of life for individuals around the world.",
         "displayPriority": 4,
-        "published": true
+   
+       
       }      
 ];
