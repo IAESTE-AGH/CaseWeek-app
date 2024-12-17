@@ -13,10 +13,10 @@ const WorkshopCard = () => {
     const workshop: WorkshopItem = WORKSHOPS_MOCKS.filter((item) => item.id === workshopId)[0]
     return (
         <main className={s.mWrap}>
-            <section className={s.xd}>
+            <section className={s.sWrap}>
                 <div className={s.hero}>
                     <h3>{workshop.title}</h3>
-                    <img src={workshop.company.logoUrl} alt="" />
+                    <img className= {s.temp} src={workshop.company.logoUrl} alt="" />
                     <h4>{workshop.company.name}</h4>
                 </div>
             </section>
@@ -53,33 +53,37 @@ const WorkshopCard = () => {
                         <div className={s.info}>
                             <span className={s.span}>
                                 <SchoolIcon className={s.icons} />
-                                uczelnia
+                                Uczelnia
                             </span>
+                            {workshop.university.name}
                         </div>
                         <div className={s.info}>
                             <span className={s.span}>
                                 <PlaceIcon className={s.icons} />
-                                miejsce warsztatu
+                                Miejsce warsztatu
                             </span>
+                            {workshop.address}
                         </div>
                     </div>
                     <div>
                         <div className={s.info}>
                             <span className={s.span}>
                                 <EmojiFlagsIcon className={s.icons} />
-                                minimalny rok studiów
+                                Minimalny rok studiów
                             </span>
+                            {workshop.minYearOfStudy}
                         </div>
                         <div className={s.info}>
                             <span className={s.span}>
                                 <EmojiFlagsIcon className={s.icons} />
-                                maksymalny rok studiów
+                                Maksymalny rok studiów
                             </span>
+                            {workshop.maxYearOfStudy}
                         </div>
                         <div className={s.info}>
                             <span className={s.span}>
                                 <EmojiFlagsIcon className={s.icons} />
-                                kierunek studiów
+                                Kierunek studiów
                             </span>
                         </div>
                     </div>
