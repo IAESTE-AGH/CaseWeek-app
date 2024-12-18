@@ -1,8 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 .workshopsList{
     list-style-type: none;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+.site_title {
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.card {
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    background-color: lightgrey;
+    border-radius: 25px;
+    margin: 0px 10% 10px 10%;
+}
+
+.company{
+    font-size:18px;
 }
 
 .workshopLink{
     color: #000;
     text-decoration: none;
+    font-size: 22px;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+  
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+  
+.details {
+    display:flex;
+    list-style: none;
+    padding: 5px 0px 5px 0px; /*example values for padding*/
+    margin-top: 10px;
+}
+  
+.details_li{
+    list-style:none;
+    padding-right: 15px;
 }
