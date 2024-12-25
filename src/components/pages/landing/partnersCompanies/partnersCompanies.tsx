@@ -1,26 +1,16 @@
 import React from 'react'
-//  import { useState, useEffect } from 'react';
-import { useParams, useLoaderData, useNavigate } from 'react-router-dom';
-//import { FaArrowLeft, FaMapMarker } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import { Company } from "@/@types/API";
-
 import styles from './partnersCompanies.module.css';
 import naTeraz from '@/assets/img/temp.png';
+import { PartnersPageProps } from './partnersCompanies.type';
 
 
 
 
-interface PartnersPageProps {
-  companies: Company[];
-  title: string;
-
-}
 
 const PartnersCompanies: React.FC<PartnersPageProps> = ({ companies, title }) => {
   return (
-    <section>
+    <section className={styles.partnersSection}>
       <h1 className={styles.title}>{title}:</h1>
       <ul className={styles.partnersGrid}>
         {companies.map((company) => (
