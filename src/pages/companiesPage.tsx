@@ -1,6 +1,11 @@
+import React from 'react'
+import { MOCK_COMPANIES } from '@/mocks/companies';
+import PartnersCompanies from '@/components/pages/landing/partnersCompanies/partnersCompanies';
+
+
 const companiesPage = () => {
   return (
-    <div>companiesPage</div>
+    <PartnersCompanies companies={MOCK_COMPANIES} title="FIRMY" />
   )
 }
 
