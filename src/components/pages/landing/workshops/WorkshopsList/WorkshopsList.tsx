@@ -41,6 +41,7 @@ const WorkshopsList = () => {
           <li className={s.individualFilter}>
             <label htmlFor="university">Uczelnia:</label>
             <select
+              name="filterNo1"
               id="university"
               value={selectedUniversity}
               onChange={(e) => setSelectedUniversity(e.target.value)}
@@ -58,6 +59,7 @@ const WorkshopsList = () => {
           <li className={s.individualFilter}>
             <label htmlFor="field">Kierunek studiów:</label>
             <select
+              name="filterNo2"
               id="field"
               value={selectedField}
               onChange={(e) => setSelectedField(e.target.value)}
@@ -73,7 +75,7 @@ const WorkshopsList = () => {
           </li>
         </div>
 
-      <ul className={s.workshopsList}>
+      <ul className={s.workshopsListContainer}>
         {filteredWorkshops.map((workshop) => ( //outputs every workshop that fits in filters  
               <li key ={workshop.id} className={s.card}>
                   <div>
@@ -92,9 +94,9 @@ const WorkshopsList = () => {
                     <p className={s.description}>{workshop.shortDescription}</p>
                     
                     <ul className={s.details}>
-                      <li className={s.details_li}>📅 Data i godzina: {workshop.startsAt}</li>
-                      <li className={s.details_li}>⏱ Czas trwania: {workshop.durationMinutes}</li>
-                      <li className={s.details_li}>🏫 Uczelnia: {workshop.university.name}</li>
+                      <li className={s.detailsLi}>📅 Data i godzina: {workshop.startsAt}</li>
+                      <li className={s.detailsLi}>⏱ Czas trwania: {workshop.durationMinutes}</li>
+                      <li className={s.detailsLi}>🏫 Uczelnia: {workshop.university.name}</li>
                     </ul>
                   </div>
               </li>
