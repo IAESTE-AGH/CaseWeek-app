@@ -1,38 +1,39 @@
-import { AuthContext } from "@/contexts/Auth"
-import { NavLink, NavLinkProps, useNavigate } from "react-router-dom"
-import { Base } from "./base"
-import { Avatar, Box, ButtonBase, Divider, IconButton, ListItemIcon, Menu, MenuItem, Stack, Tooltip } from "@mui/material"
-import user_icon from "@/assets/icons/user_icon.svg"
-import logo from "@/assets/img/logo_horizontal.png"
-import { useState } from "react"
-import { PersonAdd, Settings, Logout, HomeRepairService, AdminPanelSettings } from "@mui/icons-material"
-import { isAdmin } from "@/utils/isAdmin"
+import { AuthContext } from "@/contexts/Auth";
+import { NavLink, useNavigate } from "react-router-dom";
+import { Base } from "./base";
+import { Box, ButtonBase, Divider, ListItemIcon, Menu, MenuItem, Stack, Tooltip } from "@mui/material";
+import user_icon from "@/assets/icons/user_icon.svg";
+import logo from "@/assets/img/logo_horizontal.png";
+import { useState } from "react";
+import { HomeRepairService, AdminPanelSettings, Logout } from "@mui/icons-material";
+import { isAdmin } from "@/utils/isAdmin";
+import { t } from '../../18n';
 
 const NAVLINK_STYLE: React.CSSProperties = {
     color: "inherit",
     textDecoration: "none",
-}
+};
 
 export default function Navbar() {
-    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
-    const isOpen = Boolean(anchorEl)
-    const navigate = useNavigate()
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+    const isOpen = Boolean(anchorEl);
+    const navigate = useNavigate();
 
     const handleOpen = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorEl(event.currentTarget)
-    }
+        setAnchorEl(event.currentTarget);
+    };
 
     const handleClose = () => {
-        setAnchorEl(null)
-    }
+        setAnchorEl(null);
+    };
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
         if (anchorEl) {
-            handleClose()
+            handleClose();
         } else {
-            handleOpen(event)
+            handleOpen(event);
         }
-    }
+    };
 
     return (
         <Base id="navbar">
@@ -42,22 +43,22 @@ export default function Navbar() {
 
             <Stack direction={"row"} justifyContent={"space-around"} gap={2}>
                 <NavLink to="/projekt" style={NAVLINK_STYLE}>
-                    O Projekcie
+                    {t("O Projekcie")}
                 </NavLink>
                 <NavLink to="/iaeste" style={NAVLINK_STYLE}>
-                    O IAESTE
+                    {t("O IAESTE")}
                 </NavLink>
                 <NavLink to="/warsztaty" style={NAVLINK_STYLE}>
-                    Warsztaty
+                    {t("Warsztaty")}
                 </NavLink>
                 <NavLink to="/partnerzy" style={NAVLINK_STYLE}>
-                    Partnerzy
+                    {t("Partnerzy")}
                 </NavLink>
                 <NavLink to="/firmy" style={NAVLINK_STYLE}>
-                    Firmy
+                    {t("Firmy")}
                 </NavLink>
                 <NavLink to="/kontakt" style={NAVLINK_STYLE}>
-                    Kontakt
+                    {t("Kontakt")}
                 </NavLink>
             </Stack>
 
@@ -65,7 +66,7 @@ export default function Navbar() {
                 <AuthContext.Consumer>
                     {(state) => (
                         <>
-                            <Tooltip title={state.status === "authenticated" ? `Menu` : "Zaloguj się"}>
+                            <Tooltip title={state.status === "authenticated" ? t("Menu") : t("Zaloguj się")}>
                                 <ButtonBase
                                     onClick={state.status === "authenticated" ? (e) => handleClick(e) : () => navigate("/login")}
                                     sx={{
@@ -86,7 +87,7 @@ export default function Navbar() {
                                             padding: "8px 16px",
                                         }}
                                     >
-                                        <span>{state.status === "authenticated" ? `${state.currentUser.firstName} ${state.currentUser.lastName}` : "Zaloguj się"}</span>
+                                        <span>{state.status === "authenticated" ? `${state.currentUser.firstName} ${state.currentUser.lastName}` : t("Zaloguj się")}</span>
                                         <img src={user_icon} alt="User icon" style={{ width: "40px" }} />
                                     </Box>
                                 </ButtonBase>
@@ -137,28 +138,28 @@ export default function Navbar() {
                                 }}
                             >
                                 <MenuItem onClick={() => navigate("/user")}>
-                                    <img src={user_icon} alt="User icon" style={{ width: "32px" }} /> Moje konto
+                                    <img src={user_icon} alt="User icon" style={{ width: "32px" }} /> {t("Moje konto")}
                                 </MenuItem>
                                 <Divider />
                                 <MenuItem onClick={() => navigate("/user/warsztaty")}>
                                     <ListItemIcon>
                                         <HomeRepairService fontSize="small" />
                                     </ListItemIcon>
-                                    Moje warsztaty
+                                    {t("Moje warsztaty")}
                                 </MenuItem>
                                 {isAdmin(state) ? (
                                     <MenuItem onClick={() => navigate("/admin")}>
                                         <ListItemIcon>
                                             <AdminPanelSettings fontSize="small" />
                                         </ListItemIcon>
-                                        Panel administracyjny
+                                        {t("Panel administracyjny")}
                                     </MenuItem>
                                 ) : null}
                                 <MenuItem onClick={() => navigate("/logout")}>
                                     <ListItemIcon>
                                         <Logout fontSize="small" />
                                     </ListItemIcon>
-                                    Wyloguj się
+                                    {t("Wyloguj się")}
                                 </MenuItem>
                             </Menu>
                         </>
@@ -166,5 +167,5 @@ export default function Navbar() {
                 </AuthContext.Consumer>
             </Stack>
         </Base>
-    )
+    );
 }
