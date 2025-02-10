@@ -1,12 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { Company } from "@/@types/API";
 import styles from './partnersCompanies.module.css';
 import naTeraz from '@/assets/img/temp.png';
 import { PartnersPageProps } from './partnersCompanies.type';
-
-
-
-
+import { t } from '@/18n'; 
 
 const PartnersCompanies: React.FC<PartnersPageProps> = ({ companies, title }) => {
   return (
@@ -20,7 +17,7 @@ const PartnersCompanies: React.FC<PartnersPageProps> = ({ companies, title }) =>
                 <img src={naTeraz} alt={company.name} />
               </a>
               <p className={styles.partnerName}>{company.name}</p>
-              <p className={styles.partnerStatus}>Honorary status</p>   {/* tymczosowo poki nie ma w bazie tego statusu hardcodem jest */}
+              <p className={styles.partnerStatus}>{t("Honorary Status")}</p> {/* tymczosowo poki nie ma w bazie tego statusu hardcodem jest */}
             </div>
           </li>
         ))}

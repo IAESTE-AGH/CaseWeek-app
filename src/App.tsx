@@ -1,6 +1,6 @@
 import logo from "./logo.svg"
 import "./App.css"
-
+import "./18n"; 
 import "react-toastify/dist/ReactToastify.css"
 
 function App() {
