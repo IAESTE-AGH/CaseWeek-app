@@ -7,7 +7,7 @@ import logo from "@/assets/img/logo_horizontal.png";
 import { useState } from "react";
 import { HomeRepairService, AdminPanelSettings, Logout } from "@mui/icons-material";
 import { isAdmin } from "@/utils/isAdmin";
-import { t } from '../../18n';
+import { t } from '../../i18n/i18n';
 
 const NAVLINK_STYLE: React.CSSProperties = {
     color: "inherit",

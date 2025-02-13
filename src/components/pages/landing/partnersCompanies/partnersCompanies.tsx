@@ -3,7 +3,7 @@ import { Company } from "@/@types/API";
 import styles from './partnersCompanies.module.css';
 import naTeraz from '@/assets/img/temp.png';
 import { PartnersPageProps } from './partnersCompanies.type';
-import { t } from '@/18n'; 
+import { t } from '@/i18n/i18n'; 
 
 const PartnersCompanies: React.FC<PartnersPageProps> = ({ companies, title }) => {
   return (
