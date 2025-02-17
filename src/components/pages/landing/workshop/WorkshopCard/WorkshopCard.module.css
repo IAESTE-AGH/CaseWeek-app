@@ -1,40 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(to bottom, #d9b988 10%,#d9b988 15%, #ffffff 40%);
+}
+.workshopContainer {
+    width: 70rem;
+    margin: 0 auto;
+}
+
 .workshopWrapper {
     width: 38rem;
     margin-right: 2rem;
-}
-.workshopContainer {
     display: flex;
-    background-color: #ccc;
-    margin: auto;
-    border-radius: 1rem;
-    padding: 2rem;
+    flex-direction: column;
 }
-.infoWrap {
+.workshopSectionWrapper {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    font-size: 0.9rem;
-}
-.infoColumn {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0 20rem;
-    padding: 0;
+    position: relative;
 }
 .workshopInfo {
     display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
     list-style: none;
 }
 .icons {
-    translate: -5px 9px;
+    translate: -5px;
+    font-size: 1.1rem;
 }
 .infoGrey {
     display: flex;
+    align-items: center;
     color: #333;
     padding-right: 0.5rem;
 }
 .companyPicture {
-    width: 100%;
+    width: 13rem;
     height: 13rem;
     background-color: #ddd;
+    margin-bottom: 1rem;
+}
+.workshopDescribtionWrap{
+    position: relative;
+}
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.skillsWrap {
+    margin: 2rem 0;
+}
+.skillList {
+    display: flex;
+    justify-content: space-between;
+}
+.workshopSkill {
+    border: 2px solid #d9b988;
+    border-radius: 2rem;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+}
+.workshopSignUp{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+}
+.signUpBtn{
+    border: none;
+    border-radius: 1.2rem;
+    background-color: #d9b988;
+    padding: 1rem 4rem;
+    font-size: 1rem;
+    font-weight: bold; 
+}
+.registrationDate{
+    font-size: 0.7rem;
+    text-align: center;
+    margin-top: 5px;
+    color: #333;
+}
+.underline{
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    translate: -50% 0;
+    width: 10rem;
+    height: 4px;
+    border-radius: 0.5rem;
+    background-color: #d9b988;
+}
+.otherWorkshopsWrap{
+    margin-top: 6rem;
 }
