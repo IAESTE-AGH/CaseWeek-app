@@ -3,6 +3,7 @@ import s from "./WorkshopCard.module.css"
 import { WORKSHOPS_MOCKS } from "@/mocks/workshops"
 import { WORKSHOP_CARD_DATA } from "./WorkshopCard.const"
 import { TWorkshopCard } from "./Workshop.type"
+
 const WorkshopCard = () => {
     let { id: workshopId } = useParams()
     const workshop = WORKSHOPS_MOCKS.find((item) => item.id === workshopId) as TWorkshopCard
@@ -17,11 +18,12 @@ const WorkshopCard = () => {
             {workshop ? (
                 <>
                     <h1>{workshop.title}</h1>
+                    <h4 className={s.companyName}>{workshop.company.name}</h4>
                     <section className={s.workshopSectionWrapper}>
                         <article className={s.workshopWrapper}>
                             <div className={s.hero}>
                                 <img className={s.companyPicture} src={workshop.company.logoUrl} alt="" />
-                                <h4>{workshop.company.name}</h4>
+                                
                             </div>
                             <ul className={s.infoColumn}>
                                 {WORKSHOP_CARD_DATA.map((card, index) => (
@@ -43,7 +45,7 @@ const WorkshopCard = () => {
                                 iste beatae nemo quod commodi dolor autem molestiae rem quam, minus vero libero dolore tenetur voluptatum!
                             </p>
                             <div className={s.skillsWrap}>
-                                <h4>Czego sie nauczysz</h4>
+                                <h4 className={s.skillHeading}>Czego sie nauczysz</h4>
                                 <div className={s.skillList}>
                                     {skillsArray.map((skill) => (
                                         <div className={s.workshopSkill}>{skill}</div>
@@ -55,7 +57,7 @@ const WorkshopCard = () => {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iure placeat rerum similique, omnis fugit itaque voluptate at culpa expedita corrupti nihil, mollitia
                                 eum labore quos dolores neque, dicta asperiores! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ex error animi consectetur harum provident alias
                                 assumenda, nesciunt repellat! Dolorem consectetur, delectus facere neque nesciunt suscipit! Exercitationem nobis ducimus veniam.
-                            </p>    
+                            </p>
                             <div className={s.workshopSignUp}>
                                 <button className={s.signUpBtn}>Zapisz się na warsztat</button>
                                 <p className={s.registrationDate}>Rejestracja trwa do: 'data'</p>
@@ -63,9 +65,11 @@ const WorkshopCard = () => {
                         </article>
                         <div className={s.underline}></div>
                     </section>
-                    
+
                     <section className={s.otherWorkshopsWrap}>
-                        <h1>Mogą cię też zainteresować: </h1>
+                        <h2>Mogą cię też zainteresować: </h2>
+                        <article className={s.otherWorkshopSection}>
+                        </article>
                     </section>
                 </>
             ) : (

@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap");
+
+:root {
+    --color-base-black: #171717;
+    --color-base-white: #ffffff;
+
+    --color-neutral-dark: #262626;
+    --color-neutral-medium-dark: #2c2c2c;
+    --color-neutral-medium: #737373;
+    --color-neutral-light: #d9d9d9;
+
+    --color-primary-medium: #dab88b;
+    --color-primary-light: #ecdbc5;
+    --color-primary-dark: #5a4c32;
+
+    --font-heading-num: 8rem;
+    --font-heading-xl: 4rem;
+    --font-heading-l-m-s: 2.5rem;
+    --font-heading-xs: 2rem;
+
+    --font-paragraph-xl: 1.5rem;
+    --font-paragraph-l: 1.25rem;
+    --font-paragraph-m: 1.125rem;
+    --font-paragraph-s: 1rem;
+
+    --font-button: 1.25rem;
+
+    --font-family-spartan: "League Spartan", sans-serif;
+    --font-family-inter: "Inter", sans-serif;
+
+    --letter-spacing-default: 0%;
+    --letter-spacing-wide: 27%;
+    --letter-spacing-medium: 20%;
+
+    --line-height-100: 100%;
+    --line-height-87: 87.7%;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+}
