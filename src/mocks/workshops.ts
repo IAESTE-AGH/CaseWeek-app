@@ -39,6 +39,9 @@ export const WORKSHOPS_MOCKS: Workshop[] = [
         ],
         allFieldsOfStudyAccepted: false,
         archived: false,
+        propositions: {
+            id: ["d49b65b4-28c5-4310-8d5a-2f7fbd5c0a5e", "89089d1a-b4ac-4d45-bb8f-69a8d1d90d4c", "cde99e9a-8b72-4c8f-bc29-7e7cf456b890"],
+        },
     },
     {
         id: "d49b65b4-28c5-4310-8d5a-2f7fbd5c0a5e",
@@ -78,6 +81,9 @@ export const WORKSHOPS_MOCKS: Workshop[] = [
         ],
         allFieldsOfStudyAccepted: true,
         archived: false,
+        propositions: {
+            id: ["d49b65b4-28c5-4310-8d5a-2f7fbd5c0a5e", "89089d1a-b4ac-4d45-bb8f-69a8d1d90d4c", "cde99e9a-8b72-4c8f-bc29-7e7cf456b890"],
+        },
     },
     {
         id: "89089d1a-b4ac-4d45-bb8f-69a8d1d90d4c",
@@ -156,6 +162,9 @@ export const WORKSHOPS_MOCKS: Workshop[] = [
         ],
         allFieldsOfStudyAccepted: true,
         archived: false,
+        propositions: {
+            id: ["d49b65b4-28c5-4310-8d5a-2f7fbd5c0a5e", "89089d1a-b4ac-4d45-bb8f-69a8d1d90d4c", "cde99e9a-8b72-4c8f-bc29-7e7cf456b890"],
+        },
     },
     {
         id: "e1fcde55-1f64-4722-9ae0-08b6bce0e372",
@@ -195,6 +204,9 @@ export const WORKSHOPS_MOCKS: Workshop[] = [
         ],
         allFieldsOfStudyAccepted: false,
         archived: false,
+        propositions: {
+            id: ["d49b65b4-28c5-4310-8d5a-2f7fbd5c0a5e", "89089d1a-b4ac-4d45-bb8f-69a8d1d90d4c", "cde99e9a-8b72-4c8f-bc29-7e7cf456b890"],
+        },
     },
     {
         id: "b319c4a2-8e12-4e02-9e3d-fb76451bb9b4",
@@ -233,6 +245,9 @@ export const WORKSHOPS_MOCKS: Workshop[] = [
         ],
         allFieldsOfStudyAccepted: true,
         archived: false,
+        propositions: {
+            id: ["d49b65b4-28c5-4310-8d5a-2f7fbd5c0a5e", "89089d1a-b4ac-4d45-bb8f-69a8d1d90d4c", "cde99e9a-8b72-4c8f-bc29-7e7cf456b890"],
+        },
     },
     {
         id: "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
@@ -271,6 +286,9 @@ export const WORKSHOPS_MOCKS: Workshop[] = [
         ],
         allFieldsOfStudyAccepted: true,
         archived: false,
+        propositions: {
+            id: ["d49b65b4-28c5-4310-8d5a-2f7fbd5c0a5e", "89089d1a-b4ac-4d45-bb8f-69a8d1d90d4c", "cde99e9a-8b72-4c8f-bc29-7e7cf456b890"],
+        },
     },
     {
         id: "q1w2e3r4-t5y6-u7i8-o9p0-a1s2d3f4g5h6",
@@ -310,6 +328,9 @@ export const WORKSHOPS_MOCKS: Workshop[] = [
         ],
         allFieldsOfStudyAccepted: false,
         archived: false,
+        propositions: {
+            id: ["d49b65b4-28c5-4310-8d5a-2f7fbd5c0a5e", "89089d1a-b4ac-4d45-bb8f-69a8d1d90d4c", "cde99e9a-8b72-4c8f-bc29-7e7cf456b890"],
+        },
     },
     {
         id: "b1c2d3e4-f5g6-h7i8-j9k0-l1m2n3o4p5q",
@@ -346,6 +367,9 @@ export const WORKSHOPS_MOCKS: Workshop[] = [
         ],
         allFieldsOfStudyAccepted: true,
         archived: false,
+        propositions: {
+            id: ["d49b65b4-28c5-4310-8d5a-2f7fbd5c0a5e", "89089d1a-b4ac-4d45-bb8f-69a8d1d90d4c", "cde99e9a-8b72-4c8f-bc29-7e7cf456b890"],
+        },
     },
 ]
 
