@@ -21,10 +21,8 @@ const WorkshopCard = () => {
                     <h4 className={s.companyName}>{workshop.company.name}</h4>
                     <section className={s.workshopSectionWrapper}>
                         <article className={s.workshopWrapper}>
-                            <div className={s.hero}>
-                                <img className={s.companyPicture} src={workshop.company.logoUrl} alt="" />
-                                
-                            </div>
+                            <img className={s.companyPicture} src={workshop.company.logoUrl} alt="" />
+
                             <ul className={s.infoColumn}>
                                 {WORKSHOP_CARD_DATA.map((card, index) => (
                                     <li key={card.detalName} className={s.workshopInfo}>
@@ -69,6 +67,54 @@ const WorkshopCard = () => {
                     <section className={s.otherWorkshopsWrap}>
                         <h2>Mogą cię też zainteresować: </h2>
                         <article className={s.otherWorkshopSection}>
+                            <div className={s.workshopPreview}>
+                                <img src="" alt="" className={s.companyPicturePreview}/>
+                                <div className={s.workshopInfoPreview}>
+                                    <p className={`${s.infoGrey} ${s.infoPreview}`}>17.02.2025 Akademia Górniczo Hutnicza</p>
+                                    <h3 className={s.workshopTitlePreview}>Workshop Name Second Line</h3>
+                                    <h5 className={s.companyNamePreview}>Company Name</h5>
+                                    <div className={s.badgesWrap}>
+                                        <div className={s.badge}>krotki</div>
+                                        <div className={s.badge}>dluszczy badge</div>
+                                        <div className={s.badge}>krotki</div>
+                                        <div className={s.badge}>dluzszy badge</div>
+                                        <div className={s.badge}>krotki</div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={s.workshopPreview}>
+                                <img src="" alt="" className={s.companyPicturePreview}/>
+                                <div className={s.workshopInfoPreview}>
+                                    <p className={`${s.infoGrey} ${s.infoPreview}`}>17.02.2025 Akademia Górniczo Hutnicza</p>
+                                    <h3 className={s.workshopTitlePreview}>Workshop Name Second Line</h3>
+                                    <h5 className={s.companyNamePreview}>Company Name</h5>
+                                    <div className={s.badgesWrap}>
+                                        <div className={s.badge}>krotki</div>
+                                        <div className={s.badge}>dluszczy badge</div>
+                                        <div className={s.badge}>krotki</div>
+                                        <div className={s.badge}>dluzszy badge</div>
+                                        <div className={s.badge}>krotki</div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div className={s.workshopPreview}>
+                                <img src="" alt="" className={s.companyPicturePreview}/>
+                                <div className={s.workshopInfoPreview}>
+                                    <p className={`${s.infoGrey} ${s.infoPreview}`}>17.02.2025 Akademia Górniczo Hutnicza</p>
+                                    <h3 className={s.workshopTitlePreview}>Workshop Name Second Line</h3>
+                                    <h5 className={s.companyNamePreview}>Company Name</h5>
+                                    <div className={s.badgesWrap}>
+                                        <div className={s.badge}>krotki</div>
+                                        <div className={s.badge}>dluszczy badge</div>
+                                        <div className={s.badge}>krotki</div>
+                                        <div className={s.badge}>dluzszy badge</div>
+                                        <div className={s.badge}>krotki</div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
                         </article>
                     </section>
                 </>
