@@ -3,7 +3,7 @@
 .all{
     list-style-type: none;
     font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
+    background: linear-gradient(to bottom,#DAB88B 0%,#FFFFFF 100%);
     
 }
 
@@ -13,14 +13,13 @@
     flex-direction: column;
 }
 .siteTitle {
-    font-size: 3rem;
-    margin-top: 1.25rem;
+    font-family:'League Spartan', serif;
+    font-size: 7.5rem;
+    margin-top: 14.125rem;
     margin-bottom: 1.25rem;
-    margin-left: 10%;
-    font-weight: bold;
-    text-align: left;
-    color: #333;
-    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    color: #2C2C2C;
     letter-spacing: 0.625rem;
 }
 

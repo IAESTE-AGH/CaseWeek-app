@@ -35,7 +35,7 @@ const WorkshopsList = () => {
   
   return (
     <section className={s.all}>
-      <h1 className={s.siteTitle}>Warsztaty:</h1>
+      <h1 className={s.siteTitle}>Warsztaty</h1>
 
       <div className={s.filters}>
           <li className={s.individualFilter}>
