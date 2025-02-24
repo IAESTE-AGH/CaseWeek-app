@@ -44,5 +44,54 @@ export const MOCK_COMPANIES: Company[] = [
         "displayPriority": 4,
    
        
-      }      
+      },  
+
+      
+      {
+        "id": "c5",
+        "name": "5",
+        "logoUrl": "https://example.com/logo5.png",
+        "websiteUrl": "https://google.com",
+        "shortDescription": "Idaasd.",
+        "longDescription": "Hasdg innasd.",
+        "displayPriority": 5,
+   
+       
+      },   
+
+      {
+        "id": "c6",
+        "name": "6",
+        "logoUrl": "https://example.com/logo5.png",
+        "websiteUrl": "https://google.com",
+        "shortDescription": "Idaasd.",
+        "longDescription": "Hasdg innasd.",
+        "displayPriority": 6,
+   
+       
+      },   
+      {
+        "id": "c7",
+        "name": "7",
+        "logoUrl": "https://example.com/logo5.png",
+        "websiteUrl": "https://google.com",
+        "shortDescription": "Idaasd.",
+        "longDescription": "Hasdg innasd.",
+        "displayPriority": 7,
+   
+       
+      },   
+
+      {
+        "id": "c8",
+        "name": "8",
+        "logoUrl": "https://example.com/logo5.png",
+        "websiteUrl": "https://google.com",
+        "shortDescription": "Idaasd.",
+        "longDescription": "Hasdg innasd.",
+        "displayPriority": 8,
+   
+       
+      },  
+
 ];
