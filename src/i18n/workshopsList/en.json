@@ -1,10 +1,11 @@
 {
-    "workshops_title": "Workshops:",
-    "university_label": "University:",
-    "all_label": "All",
-    "field_label": "Field of study:",
-    "date_label": "Date & time:",
-    "duration_label": "Duration:",
-    "university_colon_label": "University:"
+  "workshopsList": {
+    "title": "Workshops:",
+    "universityLabel": "University:",
+    "allLabel": "All",
+    "fieldLabel": "Field of study:",
+    "dateLabel": "Date & time:",
+    "durationLabel": "Duration:",
+    "universityColonLabel": "University:"
   }
-  
+}

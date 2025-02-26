@@ -34,11 +34,11 @@ const WorkshopsList = () => {
 
   return (
     <section className={s.all}>
-      <h1 className={s.siteTitle}>{t("workshops_title")}</h1>
+      <h1 className={s.siteTitle}>{t("workshopsList.title")}</h1> 
 
       <div className={s.filters}>
         <li className={s.individualFilter}>
-          <label htmlFor="university">{t("university_label")}</label>
+          <label htmlFor="university">{t("workshopsList.universityLabel")}</label> 
           <select
             name="filterNo1"
             id="university"
@@ -46,7 +46,7 @@ const WorkshopsList = () => {
             onChange={(e) => setSelectedUniversity(e.target.value)}
             className={s.filterSelect}
           >
-            <option value="">{t("all_label")}</option>
+            <option value="">{t("workshopsList.allLabel")}</option> 
             {universities.map((university) => (
               <option key={university} value={university}>
                 {university}
@@ -56,7 +56,7 @@ const WorkshopsList = () => {
         </li>
 
         <li className={s.individualFilter}>
-          <label htmlFor="field">{t("field_label")}</label>
+          <label htmlFor="field">{t("workshopsList.fieldLabel")}</label> 
           <select
             name="filterNo2"
             id="field"
@@ -64,7 +64,7 @@ const WorkshopsList = () => {
             onChange={(e) => setSelectedField(e.target.value)}
             className={s.filterSelect}
           >
-            <option value="">{t("all_label")}</option>
+            <option value="">{t("workshopsList.allLabel")}</option> {/* "all_label" */}
             {fields.map((field) => (
               <option key={field} value={field}>
                 {field}
@@ -97,13 +97,13 @@ const WorkshopsList = () => {
 
               <ul className={s.details}>
                 <li className={s.detailsLi}>
-                  📅 {t("date_label")} {workshop.startsAt}
+                  📅 {t("workshopsList.dateLabel")} {workshop.startsAt} 
                 </li>
                 <li className={s.detailsLi}>
-                  ⏱ {t("duration_label")} {workshop.durationMinutes}
+                  ⏱ {t("workshopsList.durationLabel")} {workshop.durationMinutes} 
                 </li>
                 <li className={s.detailsLi}>
-                  🏫 {t("university_colon_label")} {workshop.university.name}
+                  🏫 {t("workshopsList.universityColonLabel")} {workshop.university.name} 
                 </li>
               </ul>
             </div>

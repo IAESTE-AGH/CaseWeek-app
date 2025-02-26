@@ -40,7 +40,7 @@ export function CaseWeekOverview() {
                 <img src={icw_logotype} alt="IAESTE CASEWEEK logotype" width={"100%"} />
 
                 <p style={{ fontSize: "1.25rem" }}>
-                    {t("test1")}
+                    {t("homepage.introText1")} {/* "test1" */}
                 </p>
 
                 <img src={overview_1} width={"100%"} style={{ gridRow: "span 2" }} />
@@ -54,7 +54,7 @@ export function CaseWeekOverview() {
                     }}
                 >
                     <AnimatedNumbers animateToNumber={STATISTICS.workshops} fontStyle={AN_STYLE} />
-                    <span style={{ fontSize: "1.5rem" }}>{t("workshops")}</span>
+                    <span style={{ fontSize: "1.5rem" }}>{t("homepage.workshopsCounterLabel")}</span> 
                 </Box>
 
                 <img src={overview_2} width={"100%"} style={{ gridRow: "span 2" }} />
@@ -62,21 +62,21 @@ export function CaseWeekOverview() {
                 <Box gridRow={"span 2"}>
                     <Box display="flex" justifyContent={"center"} alignItems={"center"} gap={3}>
                         <AnimatedNumbers animateToNumber={STATISTICS.universities} fontStyle={AN_STYLE} />
-                        <span style={{ fontSize: "1.5rem" }}>{t("universities")}</span>
+                        <span style={{ fontSize: "1.5rem" }}>{t("homepage.universitiesCounterLabel")}</span>
                     </Box>
                     <p style={{ fontSize: "1.25rem" }}>
-                        {t("test2")}
+                        {t("homepage.introText2")} 
                     </p>
                 </Box>
 
                 <Stack direction={"row"} justifyContent={"center"} gap={6}>
                     <Box display="flex" justifyContent={"center"} alignItems={"center"} gap={3}>
                         <AnimatedNumbers animateToNumber={STATISTICS.companies} fontStyle={AN_STYLE} />
-                        <span style={{ fontSize: "1.5rem" }}>{t("companies")}</span>
+                        <span style={{ fontSize: "1.5rem" }}>{t("homepage.companiesCounterLabel")}</span> 
                     </Box>
                     <Box display="flex" justifyContent={"center"} alignItems={"center"} gap={3}>
                         <AnimatedNumbers animateToNumber={STATISTICS.cities} fontStyle={AN_STYLE} />
-                        <span style={{ fontSize: "1.5rem" }}>{t("cities")}</span>
+                        <span style={{ fontSize: "1.5rem" }}>{t("homepage.citiesCounterLabel")}</span> 
                     </Box>
                 </Stack>
             </Box>

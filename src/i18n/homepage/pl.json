@@ -1,9 +1,10 @@
 {
-    "test1": "Największy cykl warsztatów inżynierskich w Polsce. Założeniem projektu jest zbliżenie do siebie środowiska akademickiego i biznesowego. Praktyczna forma case study umożliwia studentom zapoznanie się z realnymi problemami występującymi w codziennej pracy oraz doskonalenie swoich umiejętności zarówno zawodowych jak i miękkich.",
-    "tekst2": "Projekt umożliwia studentom i pracodawcom wspólną pracę nad przygotowanymi zagadnieniami. Podczas cyklu warsztatów wiodące marki z rynku polskiego i światowego przeprowadzają warsztaty na najlepszych uczelniach technicznych w kraju. Studenci stają przed możliwością zmierzenia się z realnymi problemami spotykanymi na co dzień w pracy zawodowej. Pracodawcy mają okazję wyłonić talenty i nawiązać współpracę z potencjalnymi kandydatami. Dzięki udziale w projekcie IAESTE CaseWeek tysiące polskich studentów zdobyło wymarzoną pracę.",
-    "workshops": "Warsztatów",
-    "universities": "Uczelni",
-    "companies": "Firm",
-    "cities": "Miast"
+  "homepage": {
+    "introText1": "Największy cykl warsztatów inżynierskich w Polsce. Założeniem projektu jest zbliżenie do siebie środowiska akademickiego i biznesowego. Praktyczna forma case study umożliwia studentom zapoznanie się z realnymi problemami występującymi w codziennej pracy oraz doskonalenie swoich umiejętności zarówno zawodowych jak i miękkich.",
+    "introText2": "Projekt umożliwia studentom i pracodawcom wspólną pracę nad przygotowanymi zagadnieniami. Podczas cyklu warsztatów wiodące marki z rynku polskiego i światowego przeprowadzają warsztaty na najlepszych uczelniach technicznych w kraju. Studenci stają przed możliwością zmierzenia się z realnymi problemami spotykanymi na co dzień w pracy zawodowej. Pracodawcy mają okazję wyłonić talenty i nawiązać współpracę z potencjalnymi kandydatami. Dzięki udziale w projekcie IAESTE CaseWeek tysiące polskich studentów zdobyło wymarzoną pracę.",
+    "workshopsCounterLabel": "Warsztatów",
+    "universitiesCounterLabel": "Uczelni",
+    "companiesCounterLabel": "Firm",
+    "citiesCounterLabel": "Miast"
   }
-  
+}

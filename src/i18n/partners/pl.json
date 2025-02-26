@@ -1,3 +1,5 @@
 {
-    "Honorary Status": "Status Honorowy"
+  "partners": {
+    "honoraryStatus": "Status Honorowy"
+  }
 }
