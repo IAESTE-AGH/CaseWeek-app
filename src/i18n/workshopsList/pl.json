@@ -1,0 +1,11 @@
+{
+  "workshopsList": {
+    "title": "Warsztaty:",
+    "universityLabel": "Uczelnia:",
+    "allLabel": "Wszystkie",
+    "fieldLabel": "Kierunek studiów:",
+    "dateLabel": "Data i godzina:",
+    "durationLabel": "Czas trwania:",
+    "universityColonLabel": "Uczelnia:"
+  }
+}

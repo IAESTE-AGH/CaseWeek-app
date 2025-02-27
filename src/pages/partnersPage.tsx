@@ -4,7 +4,7 @@ import PartnersCompanies from '@/components/pages/landing/partnersCompanies/part
 
 const partnersPage = () => {
   return (
-    <PartnersCompanies companies={MOCK_COMPANIES} title="PARTNERZY" />
+    <PartnersCompanies companies={MOCK_COMPANIES} title="Partnerzy" />
   )
 }
 

@@ -7,7 +7,7 @@ import logo from "@/assets/img/logo_horizontal.png";
 import { useState } from "react";
 import { HomeRepairService, AdminPanelSettings, Logout } from "@mui/icons-material";
 import { isAdmin } from "@/utils/isAdmin";
-import { t } from '../../18n';
+import { t } from '../../i18n/i18n';
 
 const NAVLINK_STYLE: React.CSSProperties = {
     color: "inherit",
@@ -43,22 +43,22 @@ export default function Navbar() {
 
             <Stack direction={"row"} justifyContent={"space-around"} gap={2}>
                 <NavLink to="/projekt" style={NAVLINK_STYLE}>
-                    {t("O Projekcie")}
+                    {t("menuOptions.aboutProject")} 
                 </NavLink>
                 <NavLink to="/iaeste" style={NAVLINK_STYLE}>
-                    {t("O IAESTE")}
+                    {t("menuOptions.aboutIaeste")} 
                 </NavLink>
                 <NavLink to="/warsztaty" style={NAVLINK_STYLE}>
-                    {t("Warsztaty")}
+                    {t("menuOptions.workshops")} 
                 </NavLink>
                 <NavLink to="/partnerzy" style={NAVLINK_STYLE}>
-                    {t("Partnerzy")}
+                    {t("menuOptions.partners")} 
                 </NavLink>
                 <NavLink to="/firmy" style={NAVLINK_STYLE}>
-                    {t("Firmy")}
+                    {t("menuOptions.companies")} 
                 </NavLink>
                 <NavLink to="/kontakt" style={NAVLINK_STYLE}>
-                    {t("Kontakt")}
+                    {t("menuOptions.contact")} 
                 </NavLink>
             </Stack>
 
@@ -66,7 +66,7 @@ export default function Navbar() {
                 <AuthContext.Consumer>
                     {(state) => (
                         <>
-                            <Tooltip title={state.status === "authenticated" ? t("Menu") : t("Zaloguj się")}>
+                            <Tooltip title={state.status === "authenticated" ? t("menu") : t("accountOptions.logIn")}>
                                 <ButtonBase
                                     onClick={state.status === "authenticated" ? (e) => handleClick(e) : () => navigate("/login")}
                                     sx={{
@@ -87,7 +87,7 @@ export default function Navbar() {
                                             padding: "8px 16px",
                                         }}
                                     >
-                                        <span>{state.status === "authenticated" ? `${state.currentUser.firstName} ${state.currentUser.lastName}` : t("Zaloguj się")}</span>
+                                        <span>{state.status === "authenticated" ? `${state.currentUser.firstName} ${state.currentUser.lastName}` : t("accountOptions.logIn")}</span>
                                         <img src={user_icon} alt="User icon" style={{ width: "40px" }} />
                                     </Box>
                                 </ButtonBase>
@@ -138,28 +138,28 @@ export default function Navbar() {
                                 }}
                             >
                                 <MenuItem onClick={() => navigate("/user")}>
-                                    <img src={user_icon} alt="User icon" style={{ width: "32px" }} /> {t("Moje konto")}
+                                    <img src={user_icon} alt="User icon" style={{ width: "32px" }} /> {t("accountOptions.myAccount")} 
                                 </MenuItem>
                                 <Divider />
                                 <MenuItem onClick={() => navigate("/user/warsztaty")}>
                                     <ListItemIcon>
                                         <HomeRepairService fontSize="small" />
                                     </ListItemIcon>
-                                    {t("Moje warsztaty")}
+                                    {t("accountOptions.myWorkshops")} 
                                 </MenuItem>
                                 {isAdmin(state) ? (
                                     <MenuItem onClick={() => navigate("/admin")}>
                                         <ListItemIcon>
                                             <AdminPanelSettings fontSize="small" />
                                         </ListItemIcon>
-                                        {t("Panel administracyjny")}
+                                        {t("accountOptions.adminPanel")} 
                                     </MenuItem>
                                 ) : null}
                                 <MenuItem onClick={() => navigate("/logout")}>
                                     <ListItemIcon>
                                         <Logout fontSize="small" />
                                     </ListItemIcon>
-                                    {t("Wyloguj się")}
+                                    {t("accountOptions.logOut")} 
                                 </MenuItem>
                             </Menu>
                         </>
