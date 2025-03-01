@@ -22,7 +22,7 @@
     --font-paragraph-l: 1.25rem;
     --font-paragraph-m: 1.125rem;
     --font-paragraph-s: 1rem;
-
+    --font-paragraph-xs: 0.625rem;
     --font-button: 1.25rem;
 
     --font-family-spartan: "League Spartan", sans-serif;
@@ -37,5 +37,6 @@
 
     --font-weight-regular: 400;
     --font-weight-medium: 500;
+    --font-weight-medium-bold: 600;
     --font-weight-bold: 700;
 }

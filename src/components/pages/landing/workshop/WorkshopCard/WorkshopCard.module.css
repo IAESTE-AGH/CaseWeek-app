@@ -40,8 +40,8 @@ body {
     padding-right: 0.5rem;
 }
 .companyPicture {
-    width: 324px;
-    height: 324px;
+    width: 20.25rem;
+    height: 20.25rem;
     background-color: #ddd;
     margin-bottom: 1rem;
 }
@@ -78,7 +78,7 @@ h2 {
 .skillHeading {
     font-family: var(--font-family-inter);
     font-size: var(--font-paragraph-xl);
-    font-weight: 600;
+    font-weight: var(--font-weight-medium-bold);
 }
 .skillsWrap {
     margin: 2rem 0;
@@ -92,7 +92,7 @@ h2 {
     border-radius: 2rem;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
     padding: 0.9rem 1.5rem;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     font-size: var(--font-paragraph-s);
     font-family: var(--font-family-spartan);
 }
@@ -110,7 +110,7 @@ h2 {
     background-color: var(--color-primary-medium);
     padding: 1.25rem 3rem;
     font-size: var(--font-paragraph-xl);
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
     font-family: var(--font-family-spartan);
 }
 .registrationDate {
@@ -126,7 +126,7 @@ h2 {
     left: 50%;
     translate: -50% 0;
     width: 10rem;
-    height: 4px;
+    height: 0.25rem;
     border-radius: 0.5rem;
     background-color: var(--color-primary-medium);
 }
@@ -140,16 +140,16 @@ h2 {
 .workshopPreview {
     position: relative;
     display: flex;
-    width: 400px;
-    height: 150px;
-    padding-right: 20px;
+    width: 25rem;
+    height: 9.375rem;
+    padding-right: 1.25rem;
     border: 1px solid var(--color-neutral-light);
     border-radius: 1rem;
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.11);
 }
 .companyPicturePreview {
-    width: 144px;
-    height: 150px;
+    width: 9.375rem;
+    height: 9.375rem;
     border-radius: 1rem 0 0 1rem;
     background-color: #ddd;
     margin-right: 1rem;
@@ -161,10 +161,10 @@ h2 {
 }
 .infoPreview {
     font-family: var(--font-family-spartan);
-    font-size: 10px;
+    font-size: var(--font-paragraph-xs);
 }
 .workshopTitlePreview {
-    max-width: 204px;
+    max-width: 12.75rem;
     font-family: var(--font-family-spartan);
     font-weight: 700;
     letter-spacing: 8%;
@@ -173,23 +173,22 @@ h2 {
 .companyNamePreview {
     font-family: var(--font-family-spartan);
     font-size: 0.75rem;
-    font-weight: 400;
-   
+    font-weight: var(--font-weight-regular);
 }
 .badgesWrap {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    max-width: 170px;
+    max-width: 10.625rem;
 }
 .badge {
     display: inline-block;
     background-color: var(--color-primary-light);
     padding: 4px 6px 3px 6px;
-    border-radius: 16px;
+    border-radius: 1rem;
     font-family: var(--font-family-spartan);
-    font-weight: 500;
-    font-size: 10px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-paragraph-xs);
     white-space: nowrap;
 }
 .workshopActionBtn {

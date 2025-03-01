@@ -62,26 +62,27 @@ const WorkshopCard = () => {
                             <p className={s.description}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iure placeat rerum similique, omnis fugit itaque voluptate at culpa expedita corrupti nihil, mollitia
                                 eum labore quos dolores neque, dicta asperiores! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi ex error animi consectetur harum provident alias
-                                assumenda, nesciunt repellat! Dolorem consectetur, delectus facere neque nesciunt suscipit! Exercitationem nobis ducimus veniam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem molestiae sed impedit, aut dolor reprehenderit incidunt ipsa enim quas atque reiciendis placeat, velit dolorum ut voluptate. Eius amet repudiandae commodi!
-                                Esse quaerat quidem porro suscipit provident sequi adipisci, praesentium ab amet aut voluptatibus consequuntur quisquam nesciunt vitae ut explicabo dolor dolorem modi at velit incidunt reiciendis ipsum? Ullam, laborum ad!
-                                Delectus, exercitationem quia, qui quae eos repellat accusantium eius consequatur reiciendis vero tenetur rem deserunt eum aliquam. Possimus necessitatibus consectetur excepturi animi quod, autem dolorum quos nesciunt ipsam est natus?
+                                assumenda, nesciunt repellat! Dolorem consectetur, delectus facere neque nesciunt suscipit! Exercitationem nobis ducimus veniam. Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Autem molestiae sed impedit, aut dolor reprehenderit incidunt ipsa enim quas atque reiciendis placeat, velit dolorum ut voluptate. Eius amet
+                                repudiandae commodi! Esse quaerat quidem porro suscipit provident sequi adipisci, praesentium ab amet aut voluptatibus consequuntur quisquam nesciunt vitae ut explicabo
+                                dolor dolorem modi at velit incidunt reiciendis ipsum? Ullam, laborum ad! Delectus, exercitationem quia, qui quae eos repellat accusantium eius consequatur reiciendis
+                                vero tenetur rem deserunt eum aliquam. Possimus necessitatibus consectetur excepturi animi quod, autem dolorum quos nesciunt ipsam est natus?
                             </p>
                             <div className={s.workshopSignUp}>
                                 <button className={s.signUpBtn}>Zapisz się na warsztat</button>
                                 <p className={s.registrationDate}>Rejestracja trwa do: 'data'</p>
                             </div>
-                           
                         </article>
-                         <div className={s.underline}></div>
+                        <div className={s.underline}></div>
                     </section>
 
                     <section className={s.otherWorkshopsWrap}>
                         <h2>Mogą cię też zainteresować: </h2>
                         <article className={s.otherWorkshopSection}>
                             {propositions?.map((workshopPreview) => {
-                                const workshopPrev = WORKSHOPS_MOCKS.find((item) => item.id === workshopPreview) as TWorkshopCard
+                                const workshopPrev = WORKSHOPS_MOCKS.find((item) => item.id === workshopPreview)
 
-                                return (
+                                return workshopPrev ? (
                                     <div className={s.workshopPreview} key={workshopPrev.id}>
                                         <img src="" alt="" className={s.companyPicturePreview} />
                                         <div className={s.workshopInfoPreview}>
@@ -100,6 +101,8 @@ const WorkshopCard = () => {
                                             </div>
                                         </div>
                                     </div>
+                                ) : (
+                                    <p>Nie znaleziono warsztatu</p>
                                 )
                             })}
                         </article>
