@@ -1,19 +1,23 @@
 export type TWorkshopCard = {
-    startsAt: string 
-    minYearOfStudy: number 
-    maxYearOfStudy: number 
-    durationMinutes: number 
+    id:string
+    startsAt: string
+    minYearOfStudy: number
+    maxYearOfStudy: number
+    durationMinutes: number
     university: {
-        name: string 
+        name: string
     }
     preferableFieldsOfStudy: {
-        id: string 
-        name: string 
-    }[] 
-    address: string 
+        id: string
+        name: string
+    }[]
+    address: string
     company: {
         name: string
         logoUrl: string
     }
     title: string
+    propositions?: {
+        id: string[];
+    }
 }
