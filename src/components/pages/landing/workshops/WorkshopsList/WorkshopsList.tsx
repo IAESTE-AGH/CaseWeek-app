@@ -7,7 +7,7 @@ const WorkshopsList = () => {
   const [selectedUniversity, setSelectedUniversity] = useState("");
   const [selectedField, setSelectedField] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6; // Możesz zmienić liczbę warsztatów na stronie
+  const itemsPerPage = 5; // Możesz zmienić liczbę warsztatów na stronie
   
 
   // Pobieranie unikalnych uczelni
@@ -178,11 +178,11 @@ const WorkshopsList = () => {
               />
             </div>
 
-            <div>
-              <Link to={workshop.id ? `/warsztaty/${workshop.id}` : "/warsztaty"} className={s.workshopLink}>
-                <text className={s.workshopTitle}>{workshop.title}</text>
-              </Link>
-              <p className={s.company}>{workshop.company.name}</p>
+            <div className={s.workshopInformation}>
+              
+              <text className={s.workshopTitle}>{workshop.title}</text>
+              
+              <text className={s.company}>{workshop.company.name}</text>
 
               <p className={s.description}>{workshop.longDescription}</p>
 
@@ -195,7 +195,7 @@ const WorkshopsList = () => {
                   <li className={s.detailsLi}>🏫 Uczelnia: {workshop.university.name}</li>
                   <button className={s.detailsLinkButton}>
                    <Link to={workshop.id ? `/warsztaty/${workshop.id}` : "/warsztaty"} className={s.workshopLink}>
-                    <text className={s.detailsLinkText}>Przejdź do szczegółów</text>
+                    <text className={s.detailsLinkButtonText}>Przejdź do szczegółów</text>
                    </Link>
                   </button>
               </ul>

@@ -7,18 +7,19 @@
 }
 
 .titleAndfiltersContainer{
-    background: linear-gradient(to bottom,#DAB88B 0%,#FFFFFF 100%); 
+    background: linear-gradient(to bottom,#DAB88B 0%,#DAB88B 50%,#FFFFFF 100%); 
 }
 
 .siteTitle {
-    
+    display: flex;
+    justify-content: center;
     font-size: 7.5rem;
-    /*margin-top: 14.125rem;*/
-    margin-bottom: 1.25rem;
     font-weight: 700;
     text-align: center;
     color: #2C2C2C;
     letter-spacing: 0.625rem;
+    padding: 5rem 0 0 0;
+    margin-bottom: 1.25rem;
      
 }
 .pagingAndfilters{
@@ -131,17 +132,17 @@
 }
 
 .workshopsListContainer{
-    margin: 1.25rem;
     display: flex;
     flex-direction: column;
+    width:100%;
+    margin: 1.25rem;
 }
 
 .card {
     display: flex;
     gap: 1.875rem;
     padding: 1.25rem;
-    background-color: lightgrey;
-    border-radius: 1.625rem;
+    background-color: #FFFFFF;
     margin: 0 10% 0.625rem 10%;
 }
 
@@ -151,29 +152,29 @@
     object-fit: cover;
 }
 
+.workshopInformation{
+    width:60%;
+    display:flex;
+    flex-direction: column;
+}
+
 .workshopTitle {
     font-size: 2.5rem;
     letter-spacing: 0.625rem;
 }
 
 .company{
-    font-size:1.625rem;
+    font-size:1.5rem;
     font-weight: 600;
     text-align:left;
 }
 
-
-.workshopLink{
-    color: #000;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
 .description{
-    
+    font-size:1.25rem;
 }
 
 .details {
+    width: 100%;
     list-style: none;
     padding: 0.625rem 0 0.625rem 0; /*example values for padding*/
     margin-top: 1.25rem;
@@ -185,13 +186,38 @@
 }
 
 .detailsLinkButton{
-
+    
+    border: 0.125rem solid #d4a374;
+    border-radius: 10rem;
+    color: #000000;
+    background-color: #DAB88B;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    padding: 0.5rem 2rem 0.5rem 2rem;
 }
 
-.detailsLinkText{
+.detailsLinkButtonText{
+    text-align:center;
+    font-size: 1rem;
+    font-weight:400;
+    color: #000000;
     
 }
-.paginDown{
-    align-items: center;
+
+.detailsLinkButton:hover {
+    background-color: #d4a374;
+    color: white;
+}
+
+.workshopLink{
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.pagingDown{
+    display:flex;
+    justify-content:center;
     gap: 1rem;
+    margin-bottom: 2rem;
 }
