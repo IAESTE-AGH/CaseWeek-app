@@ -7,7 +7,7 @@ const WorkshopsList = () => {
   const [selectedUniversity, setSelectedUniversity] = useState("");
   const [selectedField, setSelectedField] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5; // Możesz zmienić liczbę warsztatów na stronie
+  const itemsPerPage = 3; // Możesz zmienić liczbę warsztatów na stronie
   
 
   // Pobieranie unikalnych uczelni
@@ -122,7 +122,7 @@ const WorkshopsList = () => {
               <button
                 onClick={handleNextPage}
                 disabled={currentPage === totalPages}
-                className={s.pageButton}
+                className={s.pageButtonNextAndPrevious1}
               >
                 Następna →
               </button>
@@ -184,7 +184,7 @@ const WorkshopsList = () => {
               
               <text className={s.company}>{workshop.company.name}</text>
 
-              <p className={s.description}>{workshop.longDescription}</p>
+              <text className={s.description}>{workshop.longDescription}</text>
 
             </div>
 
@@ -201,6 +201,15 @@ const WorkshopsList = () => {
               </ul>
             </div>
           </li>
+
+          /* Separator */
+          {index < paginatedWorkshops.length - 1 && (
+            <>
+              
+              <div className={s.separator}></div>
+            </>
+          )}
+          
         ))}
       </ul>
 
@@ -208,7 +217,7 @@ const WorkshopsList = () => {
               <button
                 onClick={handlePrevPage}
                 disabled={currentPage === 1}
-                className={s.pageButton}
+                className={s.pageButtonNextAndPrevious2}
               >
                 ← Poprzednia
               </button>
@@ -218,7 +227,7 @@ const WorkshopsList = () => {
               <button
                 onClick={handleNextPage}
                 disabled={currentPage === totalPages}
-                className={s.pageButton}
+                className={s.pageButtonNextAndPrevious2}
               >
                 Następna →
               </button>

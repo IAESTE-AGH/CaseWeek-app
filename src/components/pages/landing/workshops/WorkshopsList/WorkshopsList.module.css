@@ -18,7 +18,7 @@
     text-align: center;
     color: #2C2C2C;
     letter-spacing: 0.625rem;
-    padding: 5rem 0 0 0;
+    padding: 5rem 0 5rem 0;
     margin-bottom: 1.25rem;
      
 }
@@ -28,7 +28,7 @@
     justify-content: center;
     width:100%;
 
-    padding: 0 0 0 0
+    padding: 0 0 2rem 0
     
 }
 
@@ -40,30 +40,31 @@
 }
 
 .pageButton {
-    border: 2px solid #d4a374;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
+    border: 0.125rem solid #DAB88B;
+    border-radius: 0.625rem;
+    padding: 0.5rem 0.625rem;
     font-size: 1rem;
     color: #2C2C2C;
+    background-color:inherit;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 
-.pageButtonnext {
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
+.pageButtonNextAndPrevious1 {
+    border: none;
     font-size: 1rem;
     color: #2C2C2C;
+    background-color:inherit;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
   
 .pageButton:hover {
-    background-color: #d4a374;
+    background-color: #DAB88B;
     color: white;
 }
   
-.pageButton:disabled {
+.pageButtonNextAndPrevious1:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
@@ -94,7 +95,7 @@
     -webkit-appearance: none; 
     -moz-appearance: none; 
     background-color: white;
-    border: 1px solid #d4a374; 
+    border: 0.125rem solid #DAB88B; 
     padding: 0.5rem 1rem; 
     margin: 0.25rem;
     font-size: 1.5rem;
@@ -102,7 +103,7 @@
     color: #333; 
     outline: none; 
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
 }
    
 .filterSelect:focus {
@@ -111,7 +112,7 @@
 
 
 .filterSelect::after {
-    content: '▼'; 
+    content: '>'; 
     position: absolute;
     right: 1rem;
     pointer-events: none;
@@ -140,8 +141,8 @@
 
 .card {
     display: flex;
-    gap: 1.875rem;
-    padding: 1.25rem;
+    gap: 0.5rem;
+    padding: 1rem;
     background-color: #FFFFFF;
     margin: 0 10% 0.625rem 10%;
 }
@@ -160,6 +161,7 @@
 
 .workshopTitle {
     font-size: 2.5rem;
+    font-weight:700;
     letter-spacing: 0.625rem;
 }
 
@@ -167,10 +169,13 @@
     font-size:1.5rem;
     font-weight: 600;
     text-align:left;
+    margin:0.5rem 0 1rem 0;
 }
 
 .description{
     font-size:1.25rem;
+    font-weight:400;
+    line-height:1.625rem;
 }
 
 .details {
@@ -201,7 +206,6 @@
     font-size: 1rem;
     font-weight:400;
     color: #000000;
-    
 }
 
 .detailsLinkButton:hover {
@@ -215,9 +219,28 @@
     font-size: 1.5rem;
 }
 
+.separator{
+    
+}
+
 .pagingDown{
     display:flex;
     justify-content:center;
+    background-color:inherit;
     gap: 1rem;
     margin-bottom: 2rem;
+}
+
+.pageButtonNextAndPrevious2 {
+    border: none;
+    background-color:inherit;
+    font-size: 1rem;
+    color: #2C2C2C;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.pageButtonNextAndPrevious2:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
