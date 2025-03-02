@@ -1,11 +1,14 @@
-import { WORKSHOPS_MOCKS } from "@/mocks/workshops"
-import { Link } from "react-router-dom"
+import { WORKSHOPS_MOCKS } from "@/mocks/workshops";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-import s from "./WorkshopsList.module.css"
+import s from "./WorkshopsList.module.css";
 
 const WorkshopsList = () => {
   const [selectedUniversity, setSelectedUniversity] = useState("");
   const [selectedField, setSelectedField] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6; // Możesz zmienić liczbę warsztatów na stronie
+  
 
   // Pobieranie unikalnych uczelni
   const universities = [
@@ -32,79 +35,197 @@ const WorkshopsList = () => {
 
     return matchesUniversity && matchesField;
   });
+
+  //ile jest workshopow total 
+  const totalPages = Math.ceil(filteredWorkshops.length / itemsPerPage);
+
+
+  const paginatedWorkshops = filteredWorkshops.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const handlePageClick = (page: number) => {
+    setCurrentPage(page);
+  };
   
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
+  };
+  
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  //considers number of pages to render 
+  const renderPagination = () => {
+    const pages = [];
+    if (totalPages <= 5) {
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      pages.push(1);
+      if (currentPage > 3) pages.push("...");
+  
+      let start = Math.max(2, currentPage - 1);
+      let end = Math.min(totalPages - 1, currentPage + 1);
+  
+      for (let i = start; i <= end; i++) {
+        pages.push(i);
+      }
+  
+      if (currentPage < totalPages - 2) pages.push("...");
+      pages.push(totalPages);
+    }
+  
+    return pages.map((page, index) =>
+      typeof page === "number" ? (
+        <button
+          key={index}
+          className={`${s.pageButton} ${page === currentPage ? s.activePage : ""}`}
+          onClick={() => handlePageClick(page)}
+        >
+          {page}
+        </button>
+      ) : (
+        <span key={index} className={s.ellipsis}>
+          {page}
+        </span>
+      )
+    );
+  };
+
   return (
     <section className={s.all}>
-      <h1 className={s.siteTitle}>Warsztaty</h1>
 
-      <div className={s.filters}>
-          <li className={s.individualFilter}>
-            <label htmlFor="university">Uczelnia:</label>
-            <select
-              name="filterNo1"
-              id="university"
-              value={selectedUniversity}
-              onChange={(e) => setSelectedUniversity(e.target.value)}
-              className={s.filterSelect}
-            >
-              <option value="">Wszystkie</option>
-              {universities.map((university) => (
-                <option key={university} value={university}>
-                  {university}  
-                </option>
-              ))}
-            </select>
-          </li>
-            
-          <li className={s.individualFilter}>
-            <label htmlFor="field">Kierunek studiów:</label>
-            <select
-              name="filterNo2"
-              id="field"
-              value={selectedField}
-              onChange={(e) => setSelectedField(e.target.value)}
-              className={s.filterSelect}
-            >
-              <option value="">Wszystkie</option>
-              {fields.map((field) => (
-                <option key={field} value={field}>
-                  {field}
-                </option>
-              ))}
-            </select>
-          </li>
+      <div className={s.titleAndfiltersContainer}>
+        
+        <text className={s.siteTitle}>Warsztaty</text>
+
+        <div className={s.pagingAndfilters}>
+          <div className={s.paging}>
+              {/* <button
+                onClick={handlePrevPage}
+                disabled={currentPage === 1}
+                className={s.pageButton}
+              >
+                ← Poprzednia
+              </button> */}
+              
+              {renderPagination()}
+              
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                className={s.pageButton}
+              >
+                Następna →
+              </button>
+          </div>
+
+
+          <div className={s.filters}>
+            <li className={s.individualFilter1}>
+              <label htmlFor="university">Uczelnia:</label>
+              <select
+                id="university"
+                value={selectedUniversity}
+                onChange={(e) => setSelectedUniversity(e.target.value)}
+                className={s.filterSelect}
+              >
+                <option value="">wybierz</option>
+                {universities.map((university) => (
+                  <option key={university} value={university}>
+                    {university}
+                  </option>
+                ))}
+              </select>
+            </li>
+
+            <li className={s.individualFilter2}>
+              <label htmlFor="field">Kierunek studiów:</label>
+              <select
+                id="field"
+                value={selectedField}
+                onChange={(e) => setSelectedField(e.target.value)}
+                className={s.filterSelect}
+              >
+                <option value="">wybierz</option>
+                {fields.map((field) => (
+                  <option key={field} value={field}>
+                    {field}
+                  </option>
+                ))}
+              </select>
+            </li>
+          </div>
         </div>
+      </div>
 
       <ul className={s.workshopsListContainer}>
-        {filteredWorkshops.map((workshop) => ( //outputs every workshop that fits in filters  
-              <li key ={workshop.id} className={s.card}>
-                  <div>
-                    <img 
-                      //src={workshop.company.logoUrl} //not working unfortunately 
-                      src="https://via.placeholder.com/150"
-                      alt="Workshop" //just in case 
-                      className={s.image}
-                    />
-                    <p className={s.company}>{workshop.company.name}</p>
-                  </div>
-                  <div>
-                    <Link to={workshop.id ? `/warsztaty/${workshop.id}` : "/warsztaty"} className={s.workshopLink}>
-                      <h2>{workshop.title}</h2>
-                    </Link>
-                    <p className={s.description}>{workshop.shortDescription}</p>
-                    
-                    <ul className={s.details}>
-                      <li className={s.detailsLi}>📅 Data i godzina: {workshop.startsAt}</li>
-                      <li className={s.detailsLi}>⏱ Czas trwania: {workshop.durationMinutes}</li>
-                      <li className={s.detailsLi}>🏫 Uczelnia: {workshop.university.name}</li>
-                    </ul>
-                  </div>
-              </li>
-          ))}
+        {paginatedWorkshops.map((workshop) => (
+          <li key={workshop.id} className={s.card}>
+            <div>
+              <img 
+                src="https://via.placeholder.com/150"
+                alt="Workshop"
+                className={s.image}
+              />
+            </div>
+
+            <div>
+              <Link to={workshop.id ? `/warsztaty/${workshop.id}` : "/warsztaty"} className={s.workshopLink}>
+                <text className={s.workshopTitle}>{workshop.title}</text>
+              </Link>
+              <p className={s.company}>{workshop.company.name}</p>
+
+              <p className={s.description}>{workshop.longDescription}</p>
+
+            </div>
+
+            <div>
+              <ul className={s.details}>
+                  <li className={s.detailsLi}>📅 Data i godzina: {workshop.startsAt}</li>
+                  <li className={s.detailsLi}>⏱ Czas trwania: {workshop.durationMinutes}</li>
+                  <li className={s.detailsLi}>🏫 Uczelnia: {workshop.university.name}</li>
+                  <button className={s.detailsLinkButton}>
+                   <Link to={workshop.id ? `/warsztaty/${workshop.id}` : "/warsztaty"} className={s.workshopLink}>
+                    <text className={s.detailsLinkText}>Przejdź do szczegółów</text>
+                   </Link>
+                  </button>
+              </ul>
+            </div>
+          </li>
+        ))}
       </ul>
+
+      <div className={s.pagingDown}>
+              <button
+                onClick={handlePrevPage}
+                disabled={currentPage === 1}
+                className={s.pageButton}
+              >
+                ← Poprzednia
+              </button>
+              
+              {renderPagination()}
+              
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                className={s.pageButton}
+              >
+                Następna →
+              </button>
+          </div>
+
     </section>
   );
-  
 };
 
-export default WorkshopsList
+export default WorkshopsList;

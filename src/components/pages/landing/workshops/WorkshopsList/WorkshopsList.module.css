@@ -1,42 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .all{
     list-style-type: none;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to bottom,#DAB88B 0%,#FFFFFF 100%);
-    
+    font-family:'League Spartan', sans-serif;
+    background-color: #FFFFFF;
 }
 
-.workshopsListContainer{
-    margin: 1.25rem;
-    display: flex;
-    flex-direction: column;
+.titleAndfiltersContainer{
+    background: linear-gradient(to bottom,#DAB88B 0%,#FFFFFF 100%); 
 }
+
 .siteTitle {
-    font-family:'League Spartan', serif;
+    
     font-size: 7.5rem;
-    margin-top: 14.125rem;
+    /*margin-top: 14.125rem;*/
     margin-bottom: 1.25rem;
     font-weight: 700;
     text-align: center;
     color: #2C2C2C;
     letter-spacing: 0.625rem;
+     
+}
+.pagingAndfilters{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;
+
+    padding: 0 0 0 0
+    
+}
+
+.paging{
+    display: flex;
+    width:40%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.pageButton {
+    border: 2px solid #d4a374;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #2C2C2C;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.pageButtonnext {
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #2C2C2C;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+  
+.pageButton:hover {
+    background-color: #d4a374;
+    color: white;
+}
+  
+.pageButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .filters{
     display: flex;
-    gap: 1rem; 
     justify-content: center;
-    margin: 0 10% 1.25rem 12.5%;
+    gap: 1rem; 
+    
 }
 
-.individualFilter{
+.individualFilter1{
     display: flex;
     flex-direction: column;
-    letter-spacing: 0.3125rem;
     font-size: 1.25rem;
-    width:100%;
-   
+    width:55%;
+}
+
+.individualFilter2{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25rem;
+    width:45%;
 }
 
 .filterSelect {
@@ -45,9 +94,8 @@
     -moz-appearance: none; 
     background-color: white;
     border: 1px solid #d4a374; 
-    border-radius: 1.25rem; 
     padding: 0.5rem 1rem; 
-    margin: 0.5rem;
+    margin: 0.25rem;
     font-size: 1.5rem;
     font-family: inherit; 
     color: #333; 
@@ -82,6 +130,12 @@
     color: #000;
 }
 
+.workshopsListContainer{
+    margin: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
 .card {
     display: flex;
     gap: 1.875rem;
@@ -97,15 +151,17 @@
     object-fit: cover;
 }
 
-.company{
-    font-size:1.25rem;
-    text-align:center;
+.workshopTitle {
+    font-size: 2.5rem;
+    letter-spacing: 0.625rem;
 }
 
-.title {
-    font-size: 2.5rem;
-    margin-bottom: 1.25rem;
+.company{
+    font-size:1.625rem;
+    font-weight: 600;
+    text-align:left;
 }
+
 
 .workshopLink{
     color: #000;
@@ -114,11 +170,10 @@
 }
 
 .description{
-    /*cos*/
+    
 }
-  
+
 .details {
-    display:flex;
     list-style: none;
     padding: 0.625rem 0 0.625rem 0; /*example values for padding*/
     margin-top: 1.25rem;
@@ -126,5 +181,17 @@
   
 .detailsLi{
     list-style:none;
-    padding-right: 1.25rem;
+    padding: 0.5rem;
+}
+
+.detailsLinkButton{
+
+}
+
+.detailsLinkText{
+    
+}
+.paginDown{
+    align-items: center;
+    gap: 1rem;
 }
