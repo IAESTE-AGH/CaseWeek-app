@@ -9,6 +9,7 @@ import { HomeRepairService, AdminPanelSettings, Logout, Login } from "@mui/icons
 import { isAdmin } from "@/utils/isAdmin";
 import { t } from "../../i18n/i18n";
 
+
 const NAVLINK_STYLE: React.CSSProperties = {
   color: "inherit",
   textDecoration: "none",
@@ -52,9 +53,7 @@ export default function Navbar() {
           alt="Logo image"
           sx={{ height: { xs: 40, md: 55 } }}
         />
-      </NavLink>
-
-      
+      </NavLink>   
       <Stack
         direction={"row"}
         justifyContent={"space-around"}
@@ -89,7 +88,6 @@ export default function Navbar() {
         <BurgerIcon />
       </ButtonBase>
 
-     
       <Drawer
         anchor="right"
         open={mobileOpen}
@@ -160,9 +158,7 @@ export default function Navbar() {
             }
           </AuthContext.Consumer>
         </List>
-      </Drawer>
-
-      
+      </Drawer>    
       <Stack direction={"row"} justifyContent={"flex-end"} sx={{ display: { xs: "none", md: "flex" } }}>
         <AuthContext.Consumer>
           {(state) => (
