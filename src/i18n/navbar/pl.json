@@ -1,0 +1,18 @@
+{
+  "menuOptions": {
+    "aboutProject": "O Projekcie",
+    "aboutIaeste": "O IAESTE",
+    "workshops": "Warsztaty",
+    "partners": "Partnerzy",
+    "companies": "Firmy",
+    "contact": "Kontakt"
+  },
+  "accountOptions": {
+    "myAccount": "Moje konto",
+    "myWorkshops": "Moje warsztaty",
+    "adminPanel": "Panel administracyjny",
+    "logOut": "Wyloguj się",
+    "logIn": "Zaloguj się"
+  },
+  "menu": "Menu"
+}

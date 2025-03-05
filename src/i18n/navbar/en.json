@@ -1,0 +1,18 @@
+{
+  "menuOptions": {
+    "aboutProject": "About the Project",
+    "aboutIaeste": "About IAESTE",
+    "workshops": "Workshops",
+    "partners": "Partners",
+    "companies": "Companies",
+    "contact": "Contact"
+  },
+  "accountOptions": {
+    "myAccount": "My Account",
+    "myWorkshops": "My Workshops",
+    "adminPanel": "Admin Panel",
+    "logOut": "Log Out",
+    "logIn": "Log In"
+  },
+  "menu": "Menu"
+}
