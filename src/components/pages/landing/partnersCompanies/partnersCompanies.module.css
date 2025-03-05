@@ -113,3 +113,57 @@
     color: #1271FF;
     z-index: 1;
 }
+
+
+@media(max-width: 767px){
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .partnersSection::after {
+        bottom: 10%;
+        width: 35rem;           
+        height: 35rem;
+    }
+
+    .partnersSection::before {
+        top: 40%;
+    }
+
+    .partnersGrid {
+        grid-template-columns: repeat(1, 1fr);       
+        justify-items: center;
+    }
+
+    .title{
+        margin-left: 0;
+        font-size: 4rem;    
+    }
+
+    .partner {
+        margin: 1rem auto;
+        max-width: 90%;
+      }
+
+  .partner img {
+    width: 100%;
+    height: auto;
+    border: 0.1rem solid #000;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .partner img:hover {
+    transform: scale(1.02);
+  }
+
+}
+
+
+@media(max-width: 860px){
+    
+    .partnersGrid {
+        grid-template-columns: repeat(1, 1fr);       
+    }
+
+}
