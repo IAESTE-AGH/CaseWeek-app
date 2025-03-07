@@ -39,4 +39,13 @@
     --font-weight-medium: 500;
     --font-weight-medium-bold: 600;
     --font-weight-bold: 700;
+
+    --small-screen: 640px;
+    --medium-screen: 768px;
+    --large-screen: 1024px;
+    --extra-large-screen: 1280px;
+    --dounle-extra-large-screen: 1536px;
+
+    --space-3: 1.5rem;
+    --space-4: 2rem;
 }
