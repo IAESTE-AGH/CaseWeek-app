@@ -113,3 +113,10 @@
     color: #1271FF;
     z-index: 1;
 }
+
+
+@media(max-width: 768px){
+    .partnersGrid {
+        grid-template-columns: repeat(1, 1fr);       
+    }
+}
