@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
 .all{
     list-style-type: none;
     font-family:'League Spartan', sans-serif;
@@ -22,134 +25,91 @@
     margin-bottom: 1.25rem;
      
 }
-.pagingAndfilters{
+
+.aligner{
+    width:80%;
     display:flex;
-    flex-direction: row;
-    justify-content: center;
-    width:100%;
-
-    padding: 0 0 2rem 0
-    
+    justify-content:center;
+    margin: 0 10% 0.625rem 10%;
 }
 
-.paging{
-    display: flex;
-    width:40%;
-    align-items: center;
-    gap: 1rem;
-}
-
-.pageButton {
-    border: 0.125rem solid #DAB88B;
-    border-radius: 0.625rem;
-    padding: 0.5rem 0.625rem;
-    font-size: 1rem;
-    color: #2C2C2C;
-    background-color:inherit;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-.pageButtonNextAndPrevious1 {
-    border: none;
-    font-size: 1rem;
-    color: #2C2C2C;
-    background-color:inherit;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-  
-.pageButton:hover {
-    background-color: #DAB88B;
-    color: white;
-}
-  
-.pageButtonNextAndPrevious1:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+.shadowDiv{
+    width:60%;
 }
 
 .filters{
+    width:40%;
+    
     display: flex;
-    justify-content: center;
-    gap: 1rem; 
+    
+    
+    gap: 1.5rem; 
     
 }
 
 .individualFilter1{
+    width:50%;
+    
     display: flex;
     flex-direction: column;
+
+    font-weight:500;
     font-size: 1.25rem;
-    width:55%;
+
+    
 }
 
 .individualFilter2{
+    width:50%;
+    
+
     display: flex;
     flex-direction: column;
+
+    font-weight:500;
     font-size: 1.25rem;
-    width:45%;
+    
 }
 
 .filterSelect {
+    height:3rem;
     appearance: none; 
     -webkit-appearance: none; 
     -moz-appearance: none; 
     background-color: white;
     border: 0.125rem solid #DAB88B; 
-    padding: 0.5rem 1rem; 
-    margin: 0.25rem;
-    font-size: 1.5rem;
+    margin-top:0.5rem;
+    font-size: 1.25rem;
     font-family: inherit; 
-    color: #333; 
-    outline: none; 
     cursor: pointer;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    
 }
    
-.filterSelect:focus {
-    border-color: #a67c52; 
-}
-
-
-.filterSelect::after {
-    content: '>'; 
-    position: absolute;
-    right: 1rem;
-    pointer-events: none;
-}
-  
-.filterSelect option {
-    font-size: 1rem; 
-    background-color: white;
-    color: #333;
-    padding: 0.5rem;
-    border-radius: 1.25rem; 
-}
-
-
-.filterSelect option:hover {
-    background-color: #f0f0f0;
-    color: #000;
-}
-
-.workshopsListContainer{
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    margin: 1.25rem;
-}
 
 .card {
+    width:80%;
+    height:20rem;
+
     display: flex;
-    gap: 0.5rem;
-    padding: 1rem;
+    flex-direction:column;
+
     background-color: #FFFFFF;
-    margin: 0 10% 0.625rem 10%;
+
+    
+    padding: 1rem;
+    margin: 0 10%;
+}
+
+.displayCard{
+    display:flex;
+    flex-direction:row;
+
+    gap:1.5rem;
 }
 
 .image {
-    width: 9.375rem;
-    height: 9.375rem;
+    width: auto;
+    height: 18.75rem;
     object-fit: cover;
 }
 
@@ -157,6 +117,8 @@
     width:60%;
     display:flex;
     flex-direction: column;
+    
+
 }
 
 .workshopTitle {
@@ -171,18 +133,24 @@
     text-align:left;
     margin:0.5rem 0 1rem 0;
 }
+.detailsWrapper{
+    display:flex;
+    flex-direction:row;
 
+    height:60%;
+}
 .description{
+    width:60%;
+    font-family:'Inter', sans-serif;
     font-size:1.25rem;
     font-weight:400;
     line-height:1.625rem;
 }
 
 .details {
-    width: 100%;
+    width: 80%;
     list-style: none;
-    padding: 0.625rem 0 0.625rem 0; /*example values for padding*/
-    margin-top: 1.25rem;
+   
 }
   
 .detailsLi{
@@ -191,37 +159,40 @@
 }
 
 .detailsLinkButton{
-    
-    border: 0.125rem solid #d4a374;
+    width:80%;
+    border: 0.125rem solid #DAB88B;
     border-radius: 10rem;
     color: #000000;
     background-color: #DAB88B;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    
+    
+    padding: 1rem 2rem;
+    margin-top: 1rem;
 }
 
-.detailsLinkButtonText{
+.detailsLinkButton:hover {
+    background-color: #FFFFFF;
+}
+
+.workshopLink{
     text-align:center;
     font-size: 1rem;
     font-weight:400;
     color: #000000;
-}
-
-.detailsLinkButton:hover {
-    background-color: #d4a374;
-    color: white;
-}
-
-.workshopLink{
-    color: #000;
-    text-decoration: none;
-    font-size: 1.5rem;
+    text-decoration:none;
 }
 
 .separator{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 10%;
+    height: 1rem;
+    background-color: #DAB88B;
     
-}
+}   
 
 .pagingDown{
     display:flex;
@@ -244,3 +215,33 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+.pageButton {
+    border: none;
+    border-radius: 0.625rem;
+    padding: 0.5rem 0.625rem;
+    font-size: 1rem;
+    color: #2C2C2C;
+    background-color:inherit;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+  
+.pageButton:hover {
+    background-color: #DAB88B;
+    color: white;
+}
+
+
+.activePage{
+    border:0.125rem solid #DAB88B;
+    border-radius: 0.625rem;
+    padding: 0.5rem 0.625rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color:#DAB88B;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+

@@ -2,12 +2,18 @@ import { WORKSHOPS_MOCKS } from "@/mocks/workshops";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import s from "./WorkshopsList.module.css";
+import tempListImg from "@/assets/img/overview_2.png";
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+import timeAttackIcon from "@/assets/img/timeAttackIcon.png";
+import universityIcon from "@/assets/img/universityIcon.png"
+import alarmClockIcon from "@/assets/img/alarmClockIcon.png"
 
 const WorkshopsList = () => {
   const [selectedUniversity, setSelectedUniversity] = useState("");
   const [selectedField, setSelectedField] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 3; // Możesz zmienić liczbę warsztatów na stronie
+  const itemsPerPage = 5; // Możesz zmienić liczbę warsztatów na stronie
   
 
   // Pobieranie unikalnych uczelni
@@ -107,109 +113,126 @@ const WorkshopsList = () => {
         
         <text className={s.siteTitle}>Warsztaty</text>
 
-        <div className={s.pagingAndfilters}>
-          <div className={s.paging}>
-              {/* <button
-                onClick={handlePrevPage}
-                disabled={currentPage === 1}
-                className={s.pageButton}
-              >
-                ← Poprzednia
-              </button> */}
-              
-              {renderPagination()}
-              
-              <button
-                onClick={handleNextPage}
-                disabled={currentPage === totalPages}
-                className={s.pageButtonNextAndPrevious1}
-              >
-                Następna →
-              </button>
-          </div>
+        <div className={s.aligner}>
+            <div className={s.shadowDiv}></div>
+            <div className={s.filters}>
+              <li className={s.individualFilter1}>
+                <label htmlFor="university">Uczelnia:</label>
+                {/* <select
+                  id="university"
+                  value={selectedUniversity}
+                  onChange={(e) => setSelectedUniversity(e.target.value)}
+                  className={s.filterSelect}
+                >
+                  <option value="">wybierz</option>
+                  {universities.map((university) => (
+                    <option key={university} value={university}>
+                      {university}
+                    </option>
+                  ))}
+                </select> */}
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="university"
+                  value={selectedUniversity}
+                  onChange={(e) => setSelectedUniversity(e.target.value)}
+                  displayEmpty
+                  className={s.filterSelect}
+                >
+                  <MenuItem value=""><em>wybierz</em></MenuItem>
+                  {universities.map((university) => (
+                    
+                    <MenuItem key={university} value={university}>
+                      {university}
+                    </MenuItem>
+                  ))}
+                  </Select>
+              </li>
 
-
-          <div className={s.filters}>
-            <li className={s.individualFilter1}>
-              <label htmlFor="university">Uczelnia:</label>
-              <select
-                id="university"
-                value={selectedUniversity}
-                onChange={(e) => setSelectedUniversity(e.target.value)}
-                className={s.filterSelect}
-              >
-                <option value="">wybierz</option>
-                {universities.map((university) => (
-                  <option key={university} value={university}>
-                    {university}
-                  </option>
-                ))}
-              </select>
-            </li>
-
-            <li className={s.individualFilter2}>
-              <label htmlFor="field">Kierunek studiów:</label>
-              <select
-                id="field"
-                value={selectedField}
-                onChange={(e) => setSelectedField(e.target.value)}
-                className={s.filterSelect}
-              >
-                <option value="">wybierz</option>
-                {fields.map((field) => (
-                  <option key={field} value={field}>
-                    {field}
-                  </option>
-                ))}
-              </select>
-            </li>
+              <li className={s.individualFilter2}>
+                <label htmlFor="field">Kierunek studiów:</label>
+                {/* <select
+                  id="field"
+                  value={selectedField}
+                  onChange={(e) => setSelectedField(e.target.value)}
+                  className={s.filterSelect}
+                >
+                  <option value="">wybierz</option>
+                  {fields.map((field) => (
+                    <option key={field} value={field}>
+                      {field}
+                    </option>
+                  ))}
+                </select> */}
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="field"
+                  value={selectedField}
+                  onChange={(e) => setSelectedField(e.target.value)}
+                  displayEmpty
+                  className={s.filterSelect}
+                >
+                  <MenuItem value=""><em>wybierz</em></MenuItem>
+                  {fields.map((field) => (
+                    
+                    <MenuItem key={field} value={field}>
+                      {field}
+                    </MenuItem>
+                  ))}
+                  </Select>
+              </li>
+            </div>
           </div>
         </div>
-      </div>
 
-      <ul className={s.workshopsListContainer}>
-        {paginatedWorkshops.map((workshop) => (
-          <li key={workshop.id} className={s.card}>
-            <div>
-              <img 
-                src="https://via.placeholder.com/150"
-                alt="Workshop"
-                className={s.image}
-              />
-            </div>
+      <ul>
+        
+        {paginatedWorkshops.map((workshop,index) => (
+          <div key={workshop.id} className={s.card}>
+                <div className={s.displayCard}>
+                  <div>
+                    <img 
+                      src={tempListImg}
+                      alt="Workshop"
+                      className={s.image}
+                    />
+                  </div>
 
-            <div className={s.workshopInformation}>
+                  <div>
+                    <div className={s.workshopInformation}>
+                      
+                      <text className={s.workshopTitle}>{workshop.title}</text>
+                      
+                      <text className={s.company}>{workshop.company.name}</text>
+
+                    </div>
+
+
+                    <div className={s.detailsWrapper}>
+                        <div>
+                          <text className={s.description}>{workshop.longDescription}</text>
+                        </div>
+                      
+
+                        
+                          <ul className={s.details}>
+                              <li className={s.detailsLi}> <img src={universityIcon}/> Uczelnia: {workshop.university.name}</li>
+                              <li className={s.detailsLi}> <img src={timeAttackIcon}/>Data i godzina: {workshop.startsAt}</li>
+                              <li className={s.detailsLi}> <img src={alarmClockIcon}/>Czas trwania: {workshop.durationMinutes}</li>
+                              
+                              <button className={s.detailsLinkButton}>
+                              <Link to={workshop.id ? `/warsztaty/${workshop.id}` : "/warsztaty"} className={s.workshopLink}>
+                                  Przejdź do szczegółów
+                              </Link>
+                              </button>
+                          </ul>
+                    </div>
+                  </div>
+                </div>
+
+                 {index < paginatedWorkshops.length - 1 && <div className={s.separator}></div>} 
               
-              <text className={s.workshopTitle}>{workshop.title}</text>
-              
-              <text className={s.company}>{workshop.company.name}</text>
-
-              <text className={s.description}>{workshop.longDescription}</text>
-
-            </div>
-
-            <div>
-              <ul className={s.details}>
-                  <li className={s.detailsLi}>📅 Data i godzina: {workshop.startsAt}</li>
-                  <li className={s.detailsLi}>⏱ Czas trwania: {workshop.durationMinutes}</li>
-                  <li className={s.detailsLi}>🏫 Uczelnia: {workshop.university.name}</li>
-                  <button className={s.detailsLinkButton}>
-                   <Link to={workshop.id ? `/warsztaty/${workshop.id}` : "/warsztaty"} className={s.workshopLink}>
-                    <text className={s.detailsLinkButtonText}>Przejdź do szczegółów</text>
-                   </Link>
-                  </button>
-              </ul>
-            </div>
-          </li>
-
-          /* Separator */
-          {index < paginatedWorkshops.length - 1 && (
-            <>
-              
-              <div className={s.separator}></div>
-            </>
-          )}
-          
+          </div>    
         ))}
       </ul>
 
