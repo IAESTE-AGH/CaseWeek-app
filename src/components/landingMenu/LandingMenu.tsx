@@ -14,7 +14,7 @@ const LandingMenu = () => {
         setIsOpen(false)
     }
     return (
-        <nav className={s.navContainer}>
+        <nav className={s.navContainer} id="navbar">
             <Link to="/">
                 <img src={Logo} className={s.logo} />
             </Link>

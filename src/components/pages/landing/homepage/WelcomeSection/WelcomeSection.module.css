@@ -35,7 +35,7 @@
     font-family: var(--font-family-spartan);
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 768px) {
     .headingsWrapper {
         padding: var(--space-4);
     }
