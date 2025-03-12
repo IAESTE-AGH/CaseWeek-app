@@ -68,13 +68,18 @@ const WorkshopCard = () => {
                                 dolor dolorem modi at velit incidunt reiciendis ipsum? Ullam, laborum ad! Delectus, exercitationem quia, qui quae eos repellat accusantium eius consequatur reiciendis
                                 vero tenetur rem deserunt eum aliquam. Possimus necessitatibus consectetur excepturi animi quod, autem dolorum quos nesciunt ipsam est natus?
                             </p>
-                            <div className={s.workshopSignUp}>
+                            <div className={`${s.workshopSignUp} ${s.desktop}`}>
                                 <button className={s.signUpBtn}>Zapisz się na warsztat</button>
                                 <p className={s.registrationDate}>Rejestracja trwa do: 'data'</p>
                             </div>
                         </article>
-                        <div className={s.underline}></div>
+                        <div className={`${s.underline} ${s.desktop}`}></div>
                     </section>
+                    <div className={`${s.workshopSignUp} ${s.mobile}`}>
+                        <button className={s.signUpBtn}>Zapisz się na warsztat</button>
+                        <p className={s.registrationDate}>Rejestracja trwa do: 'data'</p>
+                        <div className={`${s.underline} ${s.mobile}`}></div>
+                    </div>
 
                     <section className={s.otherWorkshopsWrap}>
                         <h2>Mogą cię też zainteresować: </h2>

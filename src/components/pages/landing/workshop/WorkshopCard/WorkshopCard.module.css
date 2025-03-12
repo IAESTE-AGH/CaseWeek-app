@@ -207,3 +207,79 @@ h2 {
     left: 50%;
     translate: -50% -50%;
 }
+.mobile{
+    display: none;
+}
+@media (max-width: 86rem) {
+    .workshopContainer {
+        width: 72rem;
+    }
+    .workshopPreview {
+        scale: 0.95;
+    }
+}
+@media (max-width: 40rem) {
+    .workshopContainer {
+        width: 20.5rem;
+    }
+    .workshopSectionWrapper {
+        flex-direction: column-reverse;
+    }
+    h1{
+        font-size: 1.75rem;
+    }
+    h4{
+        font-size: 1.375rem;
+    }
+    .workshopDescribtionWrap h4{
+        font-size: var(--font-paragraph-l);
+    }
+    .description, .skillHeading{
+        font-size: var(--font-paragraph-s);
+    }
+    .skillList {
+        flex-wrap: wrap;
+    }
+    .workshopSkill{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 10rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    .mobile{
+        display: block;
+        
+    }
+    .workshopSignUp .mobile{
+        position: static;
+        margin: auto;
+        translate: 0;
+        margin-top: 1rem;
+    }
+    .desktop{
+        display: none;
+    }
+    .companyPicture{
+        width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    }
+    .otherWorkshopSection{
+        display: none;
+    }
+    .workshopInfo, .icons, .registrationDate{
+        font-size: 0.75rem;
+    }
+    .workshopSignUp{
+        margin: 1rem 0 0;
+        width: 100%;
+    }
+    .signUpBtn{
+        width: 100%;
+        font-size: var(--font-paragraph-s);
+    }
+    h2{
+        font-size: var(--font-paragraph-xl);
+    }
+}
