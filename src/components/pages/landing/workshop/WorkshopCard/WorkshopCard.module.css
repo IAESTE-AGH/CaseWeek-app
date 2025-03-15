@@ -207,7 +207,7 @@ h2 {
     left: 50%;
     translate: -50% -50%;
 }
-.mobile{
+.mobile {
     display: none;
 }
 @media (max-width: 86rem) {
@@ -218,29 +218,43 @@ h2 {
         scale: 0.95;
     }
 }
-@media (max-width: 40rem) {
+@media (max-width: 80rem) {
     .workshopContainer {
-        width: 20.5rem;
+        width: 60rem;
+    }
+    .skillList {
+        flex-wrap: wrap;
+    }
+    .workshopActionBtn {
+        bottom: 2rem;
+    }
+    
+}
+@media (max-width: 64rem) {
+    .workshopContainer {
+        width: 100%;
     }
     .workshopSectionWrapper {
         flex-direction: column-reverse;
     }
-    h1{
+    h1 {
+        margin: 0 0 2rem;
         font-size: 1.75rem;
     }
-    h4{
+    h4 {
         font-size: 1.375rem;
     }
-    .workshopDescribtionWrap h4{
+    .workshopDescribtionWrap h4 {
         font-size: var(--font-paragraph-l);
     }
-    .description, .skillHeading{
+    .description,
+    .skillHeading {
         font-size: var(--font-paragraph-s);
     }
     .skillList {
         flex-wrap: wrap;
     }
-    .workshopSkill{
+    .workshopSkill {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -248,38 +262,44 @@ h2 {
         padding: 0.5rem 1.5rem;
         font-size: 0.875rem;
     }
-    .mobile{
+    .mobile {
         display: block;
-        
     }
-    .workshopSignUp .mobile{
+    .workshopSignUp .mobile {
         position: static;
         margin: auto;
         translate: 0;
         margin-top: 1rem;
     }
-    .desktop{
+    .desktop {
         display: none;
     }
-    .companyPicture{
+    .companyPicture {
         width: 100vw;
-    margin-left: calc(-50vw + 50%);
+        transform: translateX(-2rem);
+        margin-top: 1rem;
     }
-    .otherWorkshopSection{
-        display: none;
+    .otherWorkshopSection {
+        gap: 1.5rem;
+         align-items: center; 
+         justify-content: center;
+        flex-wrap: wrap;
+
     }
-    .workshopInfo, .icons, .registrationDate{
+    .workshopInfo,
+    .icons,
+    .registrationDate {
         font-size: 0.75rem;
     }
-    .workshopSignUp{
+    .workshopSignUp {
         margin: 1rem 0 0;
         width: 100%;
     }
-    .signUpBtn{
+    .signUpBtn {
         width: 100%;
         font-size: var(--font-paragraph-s);
     }
-    h2{
+    h2 {
         font-size: var(--font-paragraph-xl);
     }
 }
