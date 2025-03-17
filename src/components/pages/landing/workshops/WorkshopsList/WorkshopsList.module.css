@@ -1,131 +1,265 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 
 .all{
     list-style-type: none;
-    font-family: 'Roboto', sans-serif;
-    background-color: #ffffff;
-    
+    font-family:'League Spartan', sans-serif;
+    background-color: #FFFFFF;
 }
 
-.workshopsListContainer{
-    margin: 1.25rem;
-    display: flex;
-    flex-direction: column;
+.titleAndfiltersContainer{
+    background: linear-gradient(to bottom,#DAB88B 0%,#DAB88B 50%,#FFFFFF 100%); 
 }
+
 .siteTitle {
-    font-size: 3rem;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-    margin-left: 10%;
-    font-weight: bold;
-    text-align: left;
-    color: #333;
-    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-size: 7.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #2C2C2C;
     letter-spacing: 0.625rem;
+    padding: 5rem 0 5rem 0;
+    margin-bottom: 1.25rem;
+     
+}
+
+.aligner{
+    width:80%;
+    display:flex;
+    justify-content:center;
+    margin: 0 10% 0.625rem 10%;
+}
+
+.shadowDiv{
+    width:60%;
 }
 
 .filters{
+    width:40%;
+    
     display: flex;
-    gap: 1rem; 
-    justify-content: center;
-    margin: 0 10% 1.25rem 12.5%;
+    
+    
+    gap: 1.5rem; 
+    
 }
 
-.individualFilter{
+.individualFilter1{
+    width:50%;
+    
     display: flex;
     flex-direction: column;
-    letter-spacing: 0.3125rem;
+
+    font-weight:500;
     font-size: 1.25rem;
-    width:100%;
-   
+
+    
+}
+
+.individualFilter2{
+    width:50%;
+    
+
+    display: flex;
+    flex-direction: column;
+
+    font-weight:500;
+    font-size: 1.25rem;
+    
 }
 
 .filterSelect {
+    height:3rem;
     appearance: none; 
     -webkit-appearance: none; 
     -moz-appearance: none; 
     background-color: white;
-    border: 1px solid #d4a374; 
-    border-radius: 1.25rem; 
-    padding: 0.5rem 1rem; 
-    margin: 0.5rem;
-    font-size: 1.5rem;
+    border: 0.125rem solid #DAB88B; 
+    margin-top:0.5rem;
+    font-size: 1.25rem;
     font-family: inherit; 
-    color: #333; 
-    outline: none; 
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
 }
    
-.filterSelect:focus {
-    border-color: #a67c52; 
-}
-
-
-.filterSelect::after {
-    content: '▼'; 
-    position: absolute;
-    right: 1rem;
-    pointer-events: none;
-}
-  
-.filterSelect option {
-    font-size: 1rem; 
-    background-color: white;
-    color: #333;
-    padding: 0.5rem;
-    border-radius: 1.25rem; 
-}
-
-
-.filterSelect option:hover {
-    background-color: #f0f0f0;
-    color: #000;
-}
 
 .card {
+    width:80%;
+    height:23rem;
+
     display: flex;
-    gap: 1.875rem;
-    padding: 1.25rem;
-    background-color: lightgrey;
-    border-radius: 1.625rem;
-    margin: 0 10% 0.625rem 10%;
+    flex-direction:column;
+
+    background-color: #FFFFFF;
+
+    
+    padding: 1rem;
+    margin: 0 10%;
+}
+
+.displayCard{
+    
+
+    display:flex;
+    flex-direction:row;
+
+    gap:1.5rem;
 }
 
 .image {
-    width: 9.375rem;
-    height: 9.375rem;
+    width: auto;
+    height: 20rem;
     object-fit: cover;
 }
 
-.company{
-    font-size:1.25rem;
-    text-align:center;
+.workshopInformation{
+    width:60%;
+
+    display:flex;
+    flex-direction: column;
+    
+
 }
 
-.title {
+.workshopTitle {
     font-size: 2.5rem;
-    margin-bottom: 1.25rem;
+    font-weight:700;
+
+    letter-spacing: 0.125rem;
 }
 
-.workshopLink{
-    color: #000;
-    text-decoration: none;
-    font-size: 1.5rem;
+.company{
+    font-size:1.5rem;
+    font-weight: 600;
+    text-align:left;
+    margin:0.5rem 0 1rem 0;
 }
+.detailsWrapper{
+    width:100%;
+    height:60%;
+    
+    display:flex;
+    flex-direction:row;
+
+    
+}   
 
 .description{
-    /*cos*/
+    width:60%;
+    max-width:43.75rem;
+
+    font-family:'Inter', sans-serif;
+    font-size:1.25rem;
+    font-weight:400;
+    line-height:1.625rem;
+    
 }
-  
+
 .details {
-    display:flex;
+    width: 40%;
+    min-width:20rem;
+
     list-style: none;
-    padding: 0.625rem 0 0.625rem 0; /*example values for padding*/
-    margin-top: 1.25rem;
+   
 }
   
 .detailsLi{
     list-style:none;
-    padding-right: 1.25rem;
+    padding: 0.5rem;
 }
+
+.detailsLinkButton{
+    width:80%;
+    border: 0.125rem solid #DAB88B;
+    border-radius: 10rem;
+    color: #000000;
+    background-color: #DAB88B;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    
+    
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    margin-right:10%;
+    margin-left:10%;
+}
+
+.detailsLinkButton:hover {
+    background-color: #FFFFFF;
+}
+
+.workshopLink{
+    text-align:center;
+    font-size: 1rem;
+    font-weight:400;
+    color: #000000;
+    text-decoration:none;
+}
+
+.separator{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 10%;
+    height: 0.5rem;
+    background-color: #DAB88B;
+
+    margin:0.5rem 45%; 
+    /* nie da sie tego gowna wycentrowac  */
+    
+}   
+
+.pagingDown{
+    display:flex;
+    justify-content:center;
+    background-color:inherit;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pageButtonNextAndPrevious2 {
+    border: none;
+    background-color:inherit;
+    font-size: 1rem;
+    color: #2C2C2C;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.pageButtonNextAndPrevious2:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pageButton {
+    border: none;
+    border-radius: 0.625rem;
+    padding: 0.5rem 0.625rem;
+    font-size: 1rem;
+    color: #2C2C2C;
+    background-color:inherit;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+  
+.pageButton:hover {
+    background-color: #DAB88B;
+    color: white;
+}
+
+
+.activePage{
+    border:0.125rem solid #DAB88B;
+    border-radius: 0.625rem;
+    padding: 0.5rem 0.625rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color:#DAB88B;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+
