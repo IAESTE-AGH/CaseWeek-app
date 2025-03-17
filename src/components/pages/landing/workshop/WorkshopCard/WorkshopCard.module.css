@@ -17,7 +17,7 @@ body {
     padding-bottom: 1rem;
 }
 .workshopWrapper {
-    width: 38rem;
+    width: 100%;
     margin-right: 2rem;
     display: flex;
     flex-direction: column;
@@ -228,7 +228,6 @@ h2 {
     .workshopActionBtn {
         bottom: 2rem;
     }
-    
 }
 @media (max-width: 64rem) {
     .workshopContainer {
@@ -281,10 +280,9 @@ h2 {
     }
     .otherWorkshopSection {
         gap: 1.5rem;
-         align-items: center; 
-         justify-content: center;
+        align-items: center;
+        justify-content: center;
         flex-wrap: wrap;
-
     }
     .workshopInfo,
     .icons,
