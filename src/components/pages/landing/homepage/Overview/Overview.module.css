@@ -1,8 +1,21 @@
 .overviewContainer {
     position: relative;
-    display: flex;
-    flex-direction: column;
     padding: var(--space-3);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+    row-gap: var(--space-2);
+
+    grid-template-areas:
+        "a"
+        "b"
+        "d"
+        "f"
+        "c"
+        "g"
+        "h"
+        "e";
+
     background: linear-gradient(#dab88b 5%, #fffffe 10%);
     color: var(--color-neutral-medium-dark);
     overflow: hidden;
@@ -12,46 +25,73 @@
     font-size: var(--font-heading-xs);
     font-family: var(--font-family-spartan);
     letter-spacing: 0.75rem;
+    grid-area: a;
+    margin: 0;
 }
 
 .headingAccent {
     color: var(--color-base-white);
 }
 
-.textImageWrapper {
-    width: 100%;
-    margin-bottom: var(--space-4);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
+.overviewParagraph {
     z-index: 2;
+    font-size: var(--font-paragraph-l);
+}
+
+.paragraph1 {
+    grid-area: b;
 }
 
 .overviewImage1 {
-    order: 3;
-    width: 100%;
-    height: 20rem;
+    height: 24rem;
     background-image: url("/src/assets/img/overview_1.png");
     background-size: cover;
     background-position: center;
-    border-radius: 1rem;
+    grid-area: c;
+}
+
+.numbersWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: var(--font-weight-medium-bold);
+    gap: var(--space-2);
+}
+
+.workshopsNumberWrapper {
+    grid-area: f;
+}
+
+.number {
+    font-size: var(--font-heading-l-m-s);
+}
+
+.numberLabel {
+    font-size: var(--font-paragraph-l-m-s);
 }
 
 .overviewImage2 {
-    order: 3;
-    width: 100%;
-    height: 20rem;
+    height: 24rem;
     background-image: url("/src/assets/img/overview_2.png");
     background-size: cover;
     background-position: center;
-    border-radius: 1rem;
+    grid-area: e;
 }
 
-.overviewTextWrapper {
-    width: 100%;
+.universitiesNumberWrapper {
+    grid-area: d;
+}
+
+.paragrahph2 {
+    grid-area: g;
+}
+
+.numbersContainer {
     display: flex;
     flex-direction: column;
-    gap: var(--space-1);
+    justify-content: center;
+    gap: var(--space-4);
+    grid-area: h;
 }
 
 .overviewH3 {
@@ -59,43 +99,33 @@
     letter-spacing: 0.2rem;
 }
 
-.overviewParagraph {
-    font-size: var(--font-paragraph-l);
-}
-
 .wheelImage {
     position: absolute;
     bottom: 10%;
-    right: 0;
+    left: 0;
     transform: translate(40%, 5%);
     z-index: 0;
     width: 60%;
     height: 60%;
 }
 
-/* .numbersContainer {
-    display: flex;
-    margin-top: var(--space-4);
-    gap: var(--space-4);
-}
-
-.numbersWrapper {
-    display: flex;
-    align-items: center;
-    font-weight: var(--font-weight-medium-bold);
-    gap: var(--space-2);
-}
-
-.number {
-    font-size: var(--font-heading-xl);
-}
-
-.numberLabel {
-    font-size: var(--font-paragraph-xl);
-} */
-
 @media (min-width: 1024px) {
     .overviewContainer {
+        height: 150vh;
+        padding: 4rem;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas:
+            "a a a b b"
+            "c c c d d"
+            "c c c e e"
+            "c c c e e"
+            "c c c e e"
+            "f f f e e"
+            "g g g e e"
+            "g g g h h";
+        row-gap: 0;
+        gap: var(--space-3);
         background: linear-gradient(#dab88b 15%, #fffffe 25%);
     }
 
@@ -103,30 +133,28 @@
         font-size: var(--font-heading-xxl);
     }
 
-    .textImageWrapper {
-        flex-direction: row-reverse;
-        gap: var(--space-4);
+    .overviewParagraph {
+        font-size: var(--font-paragraph-xl);
     }
 
     .overviewImage1 {
-        order: 1;
-        width: 60%;
-        height: 30rem;
+        height: auto;
     }
 
     .overviewImage2 {
-        order: 1;
-        width: 60%;
-        height: 30rem;
+        height: auto;
     }
 
-    .overviewH3 {
-        font-size: var(--font-heading-l-m-s);
-        letter-spacing: 0.25rem;
+    .numbersWrapper {
+        flex-direction: row;
+        justify-content: center;
     }
 
-    .overviewParagraph {
-        width: 90%;
+    .number {
+        font-size: var(--font-heading-xxl);
+    }
+
+    .numberLabel {
         font-size: var(--font-paragraph-xl);
     }
 
@@ -136,18 +164,18 @@
         width: 40%;
         height: 40%;
     }
+
+    .numbersContainer {
+        flex-direction: row;
+        justify-content: flex-start;
+        justify-content: center;
+    }
 }
 
 @media (min-width: 1280px) {
-    .overviewParagraph {
-        width: 70%;
-    }
-
     .wheelImage {
-        bottom: 0;
-        right: 0;
-        transform: translate(35%, 35%);
-        width: 70%;
-        height: 70%;
+        bottom: -10;
+        left: -20;
+        transform: translate(0, 0);
     }
 }
