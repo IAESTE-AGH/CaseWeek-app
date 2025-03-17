@@ -14,6 +14,7 @@
     --color-primary-dark: #5a4c32;
 
     --font-heading-num: 8rem;
+    --font-heading-xxl: 6rem;
     --font-heading-xl: 4rem;
     --font-heading-l-m-s: 2.5rem;
     --font-heading-xs: 2rem;
@@ -39,4 +40,15 @@
     --font-weight-medium: 500;
     --font-weight-medium-bold: 600;
     --font-weight-bold: 700;
+
+    --small-screen: 640px;
+    --medium-screen: 768px;
+    --large-screen: 1024px;
+    --extra-large-screen: 1280px;
+    --dounle-extra-large-screen: 1536px;
+
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
 }
