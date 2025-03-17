@@ -190,6 +190,7 @@ const WorkshopsList = () => {
         {paginatedWorkshops.map((workshop,index) => (
           <div key={workshop.id} className={s.card}>
                 <div className={s.displayCard}>
+                  
                   <div>
                     <img 
                       src={tempListImg}
@@ -217,8 +218,8 @@ const WorkshopsList = () => {
                         
                           <ul className={s.details}>
                               <li className={s.detailsLi}> <img src={universityIcon}/> Uczelnia: {workshop.university.name}</li>
-                              <li className={s.detailsLi}> <img src={timeAttackIcon}/>Data i godzina: {workshop.startsAt}</li>
-                              <li className={s.detailsLi}> <img src={alarmClockIcon}/>Czas trwania: {workshop.durationMinutes}</li>
+                              <li className={s.detailsLi}> <img src={timeAttackIcon}/> Data i godzina: {workshop.startsAt}</li>
+                              <li className={s.detailsLi}> <img src={alarmClockIcon}/> Czas trwania: {workshop.durationMinutes}</li>
                               
                               <button className={s.detailsLinkButton}>
                               <Link to={workshop.id ? `/warsztaty/${workshop.id}` : "/warsztaty"} className={s.workshopLink}>
@@ -230,7 +231,7 @@ const WorkshopsList = () => {
                   </div>
                 </div>
 
-                 {index < paginatedWorkshops.length - 1 && <div className={s.separator}></div>} 
+              {index < paginatedWorkshops.length - 1 && <div className={s.separator}></div>} 
               
           </div>    
         ))}
