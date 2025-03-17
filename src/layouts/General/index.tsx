@@ -1,12 +1,12 @@
 import { Outlet } from "react-router"
 
 import Footer from "@/components/footer/footer"
-import Navbar from "@/components/navbar/navbar"
+import LandingMenu from "@/components/landingMenu/LandingMenu"
 
 const GeneralLayout: React.FunctionComponent = (props) => {
     return (
         <>
-            <Navbar />
+            <LandingMenu />
 
             <main>
                 <Outlet />

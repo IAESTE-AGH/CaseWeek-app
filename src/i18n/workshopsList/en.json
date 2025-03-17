@@ -1,0 +1,11 @@
+{
+  "workshopsList": {
+    "title": "Workshops:",
+    "universityLabel": "University:",
+    "allLabel": "All",
+    "fieldLabel": "Field of study:",
+    "dateLabel": "Date & time:",
+    "durationLabel": "Duration:",
+    "universityColonLabel": "University:"
+  }
+}

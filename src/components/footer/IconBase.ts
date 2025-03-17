@@ -1,4 +1,4 @@
-import { styled } from "@mui/system"
+import { styled } from "@mui/material"
 import React from "react"
 
 export const IconBase = styled("a")({

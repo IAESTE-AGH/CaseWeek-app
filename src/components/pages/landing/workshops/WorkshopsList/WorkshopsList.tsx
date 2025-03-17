@@ -8,6 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import timeAttackIcon from "@/assets/img/timeAttackIcon.png";
 import universityIcon from "@/assets/img/universityIcon.png"
 import alarmClockIcon from "@/assets/img/alarmClockIcon.png"
+import { t } from "@/i18n/i18n";
 
 const WorkshopsList = () => {
   const [selectedUniversity, setSelectedUniversity] = useState("");
@@ -16,18 +17,16 @@ const WorkshopsList = () => {
   const itemsPerPage = 5; // Możesz zmienić liczbę warsztatów na stronie
   
 
-  // Pobieranie unikalnych uczelni
   const universities = [
-    ...new Set(WORKSHOPS_MOCKS.map((workshop) => workshop.university.name)),
+    ...new Set(WORKSHOPS_MOCKS.map((workshop) => workshop.university.name))
   ];
 
-  // Pobieranie unikalnych kierunków studiów
   const fields = [
     ...new Set(
       WORKSHOPS_MOCKS.flatMap((workshop) =>
         workshop.preferableFieldsOfStudy.map((field) => field.name)
       )
-    ),
+    )
   ];
 
   const filteredWorkshops = WORKSHOPS_MOCKS.filter((workshop) => {

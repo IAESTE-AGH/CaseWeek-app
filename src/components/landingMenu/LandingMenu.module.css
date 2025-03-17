@@ -1,0 +1,33 @@
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-base-black);
+    padding: var(--space-3);
+}
+
+.logo {
+    height: 3rem;
+}
+
+.desktopOptionsWrapper {
+    display: none;
+}
+
+.menuIcon {
+    cursor: pointer;
+    color: var(--color-base-white);
+}
+
+.drawer {
+    padding: var(--space-3);
+}
+
+@media (min-width: 768px) {
+    .menuIconWrapper {
+        display: none;
+    }
+    .desktopOptionsWrapper {
+        display: block;
+    }
+}

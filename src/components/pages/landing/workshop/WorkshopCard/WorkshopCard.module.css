@@ -1,3 +1,305 @@
-.workshopWrapper{
-    background-color: #ccc;
+@import url("/src/style/variables.css");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(to bottom, var(--color-primary-medium) 10%, var(--color-primary-medium) 15%, #ffffff 40%);
+}
+.workshopContainer {
+    width: 80rem;
+    margin: 0 auto;
+}
+.workshopSectionWrapper {
+    display: flex;
+    position: relative;
+    padding-bottom: 1rem;
+}
+.workshopWrapper {
+    width: 38rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.workshopInfo {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    list-style: none;
+}
+.icons {
+    translate: -5px;
+}
+.infoGrey {
+    display: flex;
+    align-items: center;
+    color: var(--color-neutral-medium-dark);
+    padding-right: 0.5rem;
+}
+.companyPicture {
+    width: 20.25rem;
+    height: 20.25rem;
+    background-color: #ddd;
+    margin-bottom: 1rem;
+}
+.workshopDescribtionWrap {
+    position: relative;
+}
+.companyName {
+    font-weight: var(--font-weight-medium);
+}
+.description {
+    font-family: var(--font-family-inter);
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-paragraph-l);
+    color: var(--color-base-black);
+}
+h4 {
+    font-family: var(--font-family-spartan);
+    font-size: var(--font-heading-l-m-s);
+    margin-bottom: 1rem;
+}
+h1 {
+    font-family: var(--font-family-spartan);
+    font-size: var(--font-heading-xl);
+    letter-spacing: 3%;
+    margin: 2rem 0;
+}
+h2 {
+    font-family: var(--font-family-spartan);
+    font-size: var(--font-heading-l-m-s);
+    letter-spacing: 12%;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+.skillHeading {
+    font-family: var(--font-family-inter);
+    font-size: var(--font-paragraph-xl);
+    font-weight: var(--font-weight-medium-bold);
+}
+.skillsWrap {
+    margin: 2rem 0;
+}
+.skillList {
+    display: flex;
+    gap: 1rem;
+}
+.workshopSkill {
+    border: 3px solid var(--color-primary-medium);
+    border-radius: 2rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+    padding: 0.9rem 1.5rem;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-paragraph-s);
+    font-family: var(--font-family-spartan);
+}
+.workshopSignUp {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-top: 2.5rem;
+    width: fit-content;
+}
+.signUpBtn {
+    border: none;
+    border-radius: 1.875rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-primary-medium);
+    padding: 1.25rem 3rem;
+    font-size: var(--font-paragraph-xl);
+    font-weight: var(--font-weight-regular);
+    font-family: var(--font-family-spartan);
+}
+.registrationDate {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: var(--color-neutral-medium-dark);
+    font-size: 0.875rem;
+    font-family: var(--font-family-inter);
+}
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: 10rem;
+    height: 0.25rem;
+    border-radius: 0.5rem;
+    background-color: var(--color-primary-medium);
+}
+.otherWorkshopsWrap {
+    margin-top: 2rem;
+}
+.otherWorkshopSection {
+    display: flex;
+    justify-content: space-between;
+}
+.workshopPreview {
+    position: relative;
+    display: flex;
+    width: 25rem;
+    height: 9.375rem;
+    padding-right: 1.25rem;
+    border: 1px solid var(--color-neutral-light);
+    border-radius: 1rem;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.11);
+}
+.companyPicturePreview {
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 1rem 0 0 1rem;
+    background-color: #ddd;
+    margin-right: 1rem;
+}
+.workshopInfoPreview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.infoPreview {
+    font-family: var(--font-family-spartan);
+    font-size: var(--font-paragraph-xs);
+}
+.workshopTitlePreview {
+    max-width: 12.75rem;
+    font-family: var(--font-family-spartan);
+    font-weight: 700;
+    letter-spacing: 8%;
+    font-size: 1rem;
+}
+.companyNamePreview {
+    font-family: var(--font-family-spartan);
+    font-size: 0.75rem;
+    font-weight: var(--font-weight-regular);
+}
+.badgesWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 10.625rem;
+}
+.badge {
+    display: inline-block;
+    background-color: var(--color-primary-light);
+    padding: 4px 6px 3px 6px;
+    border-radius: 1rem;
+    font-family: var(--font-family-spartan);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-paragraph-xs);
+    white-space: nowrap;
+}
+.workshopActionBtn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--color-primary-medium);
+}
+.arrowIcon {
+    color: var(--color-primary-dark);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.mobile {
+    display: none;
+}
+@media (max-width: 86rem) {
+    .workshopContainer {
+        width: 72rem;
+    }
+    .workshopPreview {
+        scale: 0.95;
+    }
+}
+@media (max-width: 80rem) {
+    .workshopContainer {
+        width: 60rem;
+    }
+    .skillList {
+        flex-wrap: wrap;
+    }
+    .workshopActionBtn {
+        bottom: 2rem;
+    }
+    
+}
+@media (max-width: 64rem) {
+    .workshopContainer {
+        width: 100%;
+    }
+    .workshopSectionWrapper {
+        flex-direction: column-reverse;
+    }
+    h1 {
+        margin: 0 0 2rem;
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1.375rem;
+    }
+    .workshopDescribtionWrap h4 {
+        font-size: var(--font-paragraph-l);
+    }
+    .description,
+    .skillHeading {
+        font-size: var(--font-paragraph-s);
+    }
+    .skillList {
+        flex-wrap: wrap;
+    }
+    .workshopSkill {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 10rem;
+        padding: 0.5rem 1.5rem;
+        font-size: 0.875rem;
+    }
+    .mobile {
+        display: block;
+    }
+    .workshopSignUp .mobile {
+        position: static;
+        margin: auto;
+        translate: 0;
+        margin-top: 1rem;
+    }
+    .desktop {
+        display: none;
+    }
+    .companyPicture {
+        width: 100vw;
+        transform: translateX(-2rem);
+        margin-top: 1rem;
+    }
+    .otherWorkshopSection {
+        gap: 1.5rem;
+         align-items: center; 
+         justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    .workshopInfo,
+    .icons,
+    .registrationDate {
+        font-size: 0.75rem;
+    }
+    .workshopSignUp {
+        margin: 1rem 0 0;
+        width: 100%;
+    }
+    .signUpBtn {
+        width: 100%;
+        font-size: var(--font-paragraph-s);
+    }
+    h2 {
+        font-size: var(--font-paragraph-xl);
+    }
 }

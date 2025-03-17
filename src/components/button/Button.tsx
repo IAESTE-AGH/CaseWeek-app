@@ -1,5 +1,5 @@
 import MuiButton from "@mui/material/ButtonBase"
-import { styled } from "@mui/system"
+import { styled } from "@mui/material"
 import type { ButtonProps as MuiButtonProps } from "@mui/material/Button"
 import React from "react"
 
