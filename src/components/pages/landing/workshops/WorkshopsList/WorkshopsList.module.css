@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-
-.all{
+.all {
     list-style-type: none;
-    font-family:'League Spartan', sans-serif;
-    background-color: #FFFFFF;
+    font-family: "League Spartan", sans-serif;
+    background-color: #ffffff;
 }
 
-.titleAndfiltersContainer{
-    background: linear-gradient(to bottom,#DAB88B 0%,#DAB88B 50%,#FFFFFF 100%); 
+.titleAndfiltersContainer {
+    background: linear-gradient(to bottom, #dab88b 0%, #dab88b 50%, #ffffff 100%);
 }
 
 .siteTitle {
@@ -19,94 +18,85 @@
     font-size: 7.5rem;
     font-weight: 700;
     text-align: center;
-    color: #2C2C2C;
+    color: #2c2c2c;
     letter-spacing: 0.625rem;
     padding: 5rem 0 5rem 0;
     margin-bottom: 1.25rem;
-     
 }
 
-.aligner{
-    width:80%;
-    display:flex;
-    justify-content:center;
+.aligner {
+    width: 80%;
+    display: flex;
+    justify-content: center;
     margin: 0 10% 0.625rem 10%;
 }
 
-.shadowDiv{
-    width:60%;
+.shadowDiv {
+    width: 60%;
 }
 
-.filters{
-    width:40%;
-    
+.filters {
+    width: 40%;
+
     display: flex;
-    
-    
-    gap: 1.5rem; 
-    
+
+    gap: 1.5rem;
 }
 
-.individualFilter1{
-    width:50%;
-    
-    display: flex;
-    flex-direction: column;
-
-    font-weight:500;
-    font-size: 1.25rem;
-
-    
-}
-
-.individualFilter2{
-    width:50%;
-    
+.individualFilter1 {
+    width: 50%;
 
     display: flex;
     flex-direction: column;
 
-    font-weight:500;
+    font-weight: 500;
     font-size: 1.25rem;
-    
+}
+
+.individualFilter2 {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 500;
+    font-size: 1.25rem;
 }
 
 .filterSelect {
-    height:3rem;
-    appearance: none; 
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
+    height: 3rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     background-color: white;
-    border: 0.125rem solid #DAB88B; 
-    margin-top:0.5rem;
+    border: 0.125rem solid #dab88b;
+    margin-top: 0.5rem;
     font-size: 1.25rem;
-    font-family: inherit; 
+    font-family: inherit;
     cursor: pointer;
-    
 }
-   
 
 .card {
-    width:80%;
-    height:23rem;
+    width: 80%;
+    height: 23rem;
 
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
 
-    background-color: #FFFFFF;
+    background-color: #ffffff;
+    color: #2c2c2c;
 
-    
     padding: 1rem;
     margin: 0 10%;
+
+    text-decoration: none;
 }
 
-.displayCard{
-    
+.displayCard {
+    display: flex;
+    flex-direction: row;
 
-    display:flex;
-    flex-direction:row;
-
-    gap:1.5rem;
+    gap: 1.5rem;
 }
 
 .image {
@@ -115,116 +105,114 @@
     object-fit: cover;
 }
 
-.workshopInformation{
-    width:60%;
+.workshopInformation {
+    width: 60%;
 
-    display:flex;
+    display: flex;
     flex-direction: column;
-    
-
 }
 
 .workshopTitle {
     font-size: 2.5rem;
-    font-weight:700;
+    font-weight: 700;
 
     letter-spacing: 0.125rem;
 }
 
-.company{
-    font-size:1.5rem;
+.company {
+    font-size: 1.5rem;
     font-weight: 600;
-    text-align:left;
-    margin:0.5rem 0 1rem 0;
+    text-align: left;
+    margin: 0.5rem 0 1rem 0;
 }
-.detailsWrapper{
-    width:100%;
-    height:60%;
-    
-    display:flex;
-    flex-direction:row;
+.detailsWrapper {
+    width: 100%;
+    height: 60%;
 
-    
-}   
+    display: flex;
+    flex-direction: row;
+}
 
-.description{
-    width:60%;
-    max-width:43.75rem;
+.description {
+    width: 60%;
+    max-width: 43.75rem;
 
-    font-family:'Inter', sans-serif;
-    font-size:1.25rem;
-    font-weight:400;
-    line-height:1.625rem;
-    
+    font-family: "Inter", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.625rem;
 }
 
 .details {
     width: 40%;
-    min-width:20rem;
+    min-width: 20rem;
 
     list-style: none;
-   
 }
-  
-.detailsLi{
-    list-style:none;
+
+.detailsLi {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    list-style: none;
     padding: 0.5rem;
 }
 
-.detailsLinkButton{
-    width:80%;
-    border: 0.125rem solid #DAB88B;
+.iconLabel {
+}
+
+.detailsLinkButton {
+    width: 80%;
+    border: 0.125rem solid #dab88b;
     border-radius: 10rem;
     color: #000000;
-    background-color: #DAB88B;
+    background-color: #dab88b;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    
-    
+
     padding: 1rem 2rem;
     margin-top: 1rem;
-    margin-right:10%;
-    margin-left:10%;
+    margin-right: 10%;
+    margin-left: 10%;
 }
 
 .detailsLinkButton:hover {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
-.workshopLink{
-    text-align:center;
+.workshopLink {
+    text-align: center;
     font-size: 1rem;
-    font-weight:400;
+    font-weight: 400;
     color: #000000;
-    text-decoration:none;
+    text-decoration: none;
 }
 
-.separator{
-    display:flex;
+.separator {
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     width: 10%;
     height: 0.5rem;
-    background-color: #DAB88B;
+    background-color: #dab88b;
 
-    margin:0.5rem 45%; 
+    margin: 0.5rem 45%;
     /* nie da sie tego gowna wycentrowac  */
-    
-}   
+}
 
-.pagingDown{
-    display:flex;
-    justify-content:center;
-    background-color:inherit;
+.pagingDown {
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
     gap: 1rem;
     margin-bottom: 2rem;
 }
 
 .pageButtonNextAndPrevious2 {
     border: none;
-    background-color:inherit;
+    background-color: inherit;
     font-size: 1rem;
-    color: #2C2C2C;
+    color: #2c2c2c;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
@@ -239,27 +227,24 @@
     border-radius: 0.625rem;
     padding: 0.5rem 0.625rem;
     font-size: 1rem;
-    color: #2C2C2C;
-    background-color:inherit;
+    color: #2c2c2c;
+    background-color: inherit;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
-  
+
 .pageButton:hover {
-    background-color: #DAB88B;
+    background-color: #dab88b;
     color: white;
 }
 
-
-.activePage{
-    border:0.125rem solid #DAB88B;
+.activePage {
+    border: 0.125rem solid #dab88b;
     border-radius: 0.625rem;
     padding: 0.5rem 0.625rem;
     font-size: 1rem;
-    color: #FFFFFF;
-    background-color:#DAB88B;
+    color: #ffffff;
+    background-color: #dab88b;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-
 }
-

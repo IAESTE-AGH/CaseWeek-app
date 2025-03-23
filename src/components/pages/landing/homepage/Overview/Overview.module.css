@@ -1,6 +1,6 @@
 .overviewContainer {
     position: relative;
-    padding: var(--space-3);
+    padding: var(--space-5);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, auto);
@@ -22,7 +22,7 @@
 }
 
 .overviewHeading {
-    font-size: var(--font-heading-xs);
+    font-size: var(--font-heading-l-m-s);
     font-family: var(--font-family-spartan);
     letter-spacing: 0.75rem;
     grid-area: a;
@@ -67,7 +67,7 @@
 }
 
 .numberLabel {
-    font-size: var(--font-paragraph-l-m-s);
+    font-size: var(--font-paragraph-xl);
 }
 
 .overviewImage2 {
@@ -112,7 +112,6 @@
 @media (min-width: 1024px) {
     .overviewContainer {
         height: 150vh;
-        padding: 4rem;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(8, auto);
         grid-template-areas:
