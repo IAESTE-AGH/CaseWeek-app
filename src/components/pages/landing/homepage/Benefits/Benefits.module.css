@@ -1,0 +1,76 @@
+.benefitsContainer {
+    background-color: var(--color-neutral-dark);
+    padding: var(--space-5);
+}
+
+.benefitsHeading {
+    font-size: var(--font-heading-l-m-s);
+    letter-spacing: 0.27em;
+    font-weight: var(--font-weight-bold);
+    font-family: var(--font-family-spartan);
+    color: var(--color-base-white);
+    margin-inline: auto;
+    text-transform: none;
+    margin-bottom: 5rem;
+    text-align: center;
+    line-height: 1.25em;
+}
+
+.benefitsCardList {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    row-gap: var(--space-5);
+    column-gap: var(--space-2);
+}
+
+.benefitsListItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+    color: var(--color-base-white);
+}
+
+.benefitIcon {
+    height: 5rem;
+}
+
+.benefitsItemHeading {
+    font-size: var(--font-paragraph-xl);
+    margin: 0;
+    font-weight: var(--font-weight-medium-bold);
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-family-spartan);
+}
+
+.benefitsItemParagraph {
+    font-size: var(--font-paragraph-l);
+    text-align: center;
+    font-family: var(--font-family-spartan);
+    letter-spacing: 0.2em;
+    line-height: 1.25em;
+}
+
+.buttonsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: var(--space-5);
+}
+
+@media (min-width: 768px) {
+    .benefitsCardList {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1280px) {
+    .benefitsCardList {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

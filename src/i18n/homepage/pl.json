@@ -15,6 +15,12 @@
             "universitiesCounterLabel": "Uczelni",
             "companiesCounterLabel": "Firm",
             "citiesCounterLabel": "Miast"
+        },
+        "benefits": {
+            "benefitsHeading": "Co zyskujesz dzięki IAESTE CaseWeek?"
+        },
+        "components": {
+            "button": "Zarejestruj się"
         }
     }
 }
