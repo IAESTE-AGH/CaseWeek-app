@@ -1,7 +1,5 @@
 import s from "./Overview.module.css"
 import { t } from "../../../../../i18n/i18n"
-import overviewImage from "@/assets/img/overview_1.png"
-import overviewImage2 from "@/assets/img/overview_2.png"
 import { NUMBERS } from "./Overview.const"
 import cogwheelLightIcon from "@/assets/icons/cogwheel_light_icon.svg"
 import clsx from "clsx"
